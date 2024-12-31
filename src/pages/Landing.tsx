@@ -1,7 +1,14 @@
+import Footer from "../components/Footer"
+import FeatureSection from "../components/Hero"
+import NavBar from "../components/Nav"
 
 function Landing() {
   return (
-    <div>Landing</div>
+   <>
+   <NavBar/>
+   <FeatureSection/>
+   <Footer/>
+   </>
   )
 }
 
