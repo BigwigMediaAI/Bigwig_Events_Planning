@@ -6,13 +6,13 @@ const NavBar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center py-4">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <img
+          {/* <img
             src="https://images.squarespace-cdn.com/content/v1/585ac0bb414fb5eed215d4e3/7b0b3ce0-f3b4-4e2d-bf32-b389ebd89d41/BEP+Stacked+Logo+-+Stars+-+Color+%281%29.png?format=300w"
             alt="Brilliant Event Planning"
             className="w-12 h-12"
-          />
+          /> */}
           <span className="text-2xl font-bold text-teal-900">
-            Brilliant Event Planning
+            Bigwig Event's 
           </span>
         </div>
 
