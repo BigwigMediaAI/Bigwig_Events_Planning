@@ -29,11 +29,7 @@ const FollowUsSection: React.FC = () => {
           alt="Event 4"
           className="w-full h-auto rounded-lg object-cover"
         />
-        <img
-          src="https://images.squarespace-cdn.com/content/v1/585ac0bb414fb5eed215d4e3/1721251644473-9UGFTPS9EXSCFZ051XRH/image-asset.jpeg?format=300w"
-          alt="Event 5"
-          className="w-full h-auto rounded-lg object-cover"
-        />
+      
         <img
           src="https://images.squarespace-cdn.com/content/v1/585ac0bb414fb5eed215d4e3/1720652662498-WB533A8F3V22H6D1XFGP/image-asset.jpeg?format=300w"
           alt="Event 6"
