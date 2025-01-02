@@ -12,7 +12,7 @@ const FollowUsSection: React.FC = () => {
       </div>
 
       {/* Image Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 px-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-8 max-w-6xl mx-auto">
         <img
           src="https://images.squarespace-cdn.com/content/v1/585ac0bb414fb5eed215d4e3/1722640258496-6SH1NCY7YC0P29EELFBP/image-asset.jpeg?format=300w"
           alt="Event 1"
