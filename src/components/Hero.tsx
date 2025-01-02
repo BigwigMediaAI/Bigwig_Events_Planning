@@ -12,7 +12,7 @@ const HeroSection = () => {
           />
         </div>
 
-        <div className=" w-full h-full py-6 flex flex-col items-center justify-center text-center text-teal-900">
+        <div className=" w-full h-full py-6 px-6 flex flex-col items-center justify-center text-justify md:text-center  text-teal-900">
         <h1 className="text-5xl mb-4">We are Bigwig.</h1>
         <p className="text-lg max-w-5xl">
           Bigwig Events is a premier, luxury wedding and event planning company
