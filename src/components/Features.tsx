@@ -52,12 +52,12 @@ const features: Feature[] = [
 
 const FeatureSection: React.FC = () => {
     return (
-      <section className="bg-white">
+      <section className="bg-white mt-5">
         <div className="max-w-6xl mx-auto px-3 space-y-12">
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`grid md:grid-cols-2 gap-8 bg-pink-50 items-center pt-10 md:pt-0 ${
+              className={`grid md:grid-cols-2 gap-8 bg-pink-50 rounded-lg items-center pt-10 md:pt-0 ${
                 feature.reverse ? "md:grid-flow-dense" : ""
               }`}
             >
