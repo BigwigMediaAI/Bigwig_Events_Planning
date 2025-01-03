@@ -2,7 +2,7 @@ import React from "react";
 
 const FollowUsSection: React.FC = () => {
   return (
-    <div className="bg-gray-100 py-16">
+    <div className=" py-16">
       {/* Heading Section */}
       <div className="text-center mb-8">
         <h2 className="text-3xl font-semibold text-gray-800">

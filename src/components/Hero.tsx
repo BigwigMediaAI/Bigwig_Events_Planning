@@ -13,14 +13,14 @@ const HeroSection = () => {
         </div>
 
         <div className=" w-full h-full py-6 px-6 flex flex-col items-center justify-center text-justify md:text-center  text-teal-900">
-        <h1 className="text-5xl mb-4">We are Bigwig.</h1>
-        <p className="text-lg max-w-5xl">
+        <h1 className="text-3xl md:text-5xl mb-4">We are Bigwig.</h1>
+        <p className="text-md md:text-lg max-w-5xl">
           Bigwig Events is a premier, luxury wedding and event planning company
           serving NYC and Boston. We specialize in creating extraordinary,
           tailor-made experiences for dynamic and discerning clients who value
           elegance, creativity, and seamless execution.
         </p>
-        <p className="text-lg max-w-3xl mt-4">
+        <p className="text-md md:text-lg max-w-3xl mt-4">
           At Bigwig, we draw inspiration from your vision and story,
           transforming them into unforgettable events that leave a lasting
           impression. Let us handle the details so you can focus on enjoying a
