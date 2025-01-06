@@ -1,14 +1,14 @@
 
 const HeroSection = () => {
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center">
-      <div className="container mx-auto text-center">
+    <div className="bg-gray-100">
+      <div>
         {/* Hero Image */}
         <div className="mb-6">
           <img
             src="https://images.squarespace-cdn.com/content/v1/585ac0bb414fb5eed215d4e3/1694627570727-4Z839ITBKYQUD67EZ9MI/52438307865_d0b07f02c1_o+%282%29.jpg?format=2500w"
             alt="Bigwig Events"
-            className=" shadow-lg mx-auto"
+            className=" shadow-lg w-full"
           />
         </div>
 
