@@ -8,21 +8,24 @@ const Services: React.FC = () => {
       
       {/* Description */}
       <p className="text-justify md:text-center text-lg text-gray-700 mb-8">
-        We know that you want the best, so at Brilliant Event Planning, we take a limited number of events
-        per year in order to ensure each client receives a high touch planning experience. Each level of service
-        is tailor-made to fit the needs and scope of your event.
-      </p>
+  We know that you want the best, so at Bigwig Events, we take a limited number of events
+  per year in order to ensure each client receives a high-touch planning experience. Each level of service
+  is tailor-made to fit the needs and scope of your event.
+</p>
+
       
       {/* Offices Info */}
-      <p className="text-justify md:text-center text-lg text-gray-700 mb-12">
-        We have offices in both <span className="text-pink-500 font-semibold">Boston</span> and
-        <span className="text-pink-500 font-semibold"> New York City</span>. Our Boston wedding and event planners service Boston, Cape Cod,
-        Newport, Martha’s Vineyard, and Nantucket, as well as the New England states of Massachusetts, Maine,
-        Rhode Island, New Hampshire, Vermont, and Connecticut. Our New York City office services all of the
-        boroughs of NYC, as well as New York State, New Jersey, Connecticut, Pennsylvania, and D.C. However,
-        we do travel and both offices offer destination event services. In the past, our work has taken us to
-        Mexico, Ireland, Italy, Antigua, The Bahamas, California, and more!
-      </p>
+<p className="text-justify md:text-center text-lg text-gray-700 mb-12">
+  At <span className="text-pink-500 font-semibold">Bigwig Events</span>, we proudly operate offices in both
+  <span className="text-pink-500 font-semibold"> Boston</span> and
+  <span className="text-pink-500 font-semibold"> New York City</span>. Our Boston wedding and event planners cater to
+  Boston, Cape Cod, Newport, Martha’s Vineyard, and Nantucket, as well as the New England states of Massachusetts,
+  Maine, Rhode Island, New Hampshire, Vermont, and Connecticut. Our New York City office serves all boroughs of NYC,
+  as well as New York State, New Jersey, Connecticut, Pennsylvania, and D.C. Additionally, we specialize in destination
+  event services and are happy to travel. Our past projects have taken us to Mexico, Ireland, Italy, Antigua,
+  The Bahamas, California, and beyond!
+</p>
+
       
       {/* Images Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
