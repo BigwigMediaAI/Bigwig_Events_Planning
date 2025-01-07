@@ -61,9 +61,6 @@ const Nav: React.FC = () => {
             "EVENTS",
             "SERVICES",
             "ABOUT",
-            "LOVE NOTES",
-            "BLOGS",
-            "BOUTIQUE",
             "CONTACT",
           ].map((label, index) => (
             <li key={index}>
@@ -77,7 +74,9 @@ const Nav: React.FC = () => {
             </li>
           ))}
         </ul>
+        <div className="hidden md:block"></div>
       </div>
+      
 
       {/* Overlay for Darkening/Blur Effect */}
       {isMobileMenuOpen && (
@@ -94,9 +93,6 @@ const Nav: React.FC = () => {
               "EVENTS",
               "SERVICES",
               "ABOUT",
-              "LOVE NOTES",
-              "BLOGS",
-              "BOUTIQUE",
               "CONTACT",
             ].map((label, index) => (
               <li key={index}>

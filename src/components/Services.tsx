@@ -2,19 +2,19 @@ import React from 'react';
 
 const Services: React.FC = () => {
   return (
-    <div className="px-6 py-12 sm:px-12 lg:px-24 mt-10">
+    <div id='services' className="px-6 py-12 sm:px-12 lg:px-24 mt-10">
       {/* Section Title */}
       <h2 className="text-center text-3xl font-semibold text-teal-900 mb-6">OUR SERVICES</h2>
       
       {/* Description */}
-      <p className="text-center text-lg text-gray-700 mb-8">
+      <p className="text-justify md:text-center text-lg text-gray-700 mb-8">
         We know that you want the best, so at Brilliant Event Planning, we take a limited number of events
         per year in order to ensure each client receives a high touch planning experience. Each level of service
         is tailor-made to fit the needs and scope of your event.
       </p>
       
       {/* Offices Info */}
-      <p className="text-center text-lg text-gray-700 mb-12">
+      <p className="text-justify md:text-center text-lg text-gray-700 mb-12">
         We have offices in both <span className="text-pink-500 font-semibold">Boston</span> and
         <span className="text-pink-500 font-semibold"> New York City</span>. Our Boston wedding and event planners service Boston, Cape Cod,
         Newport, Martha’s Vineyard, and Nantucket, as well as the New England states of Massachusetts, Maine,

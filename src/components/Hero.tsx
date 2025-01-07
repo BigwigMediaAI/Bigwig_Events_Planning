@@ -9,7 +9,7 @@ const HeroSection = () => {
     setisMuted2(!isMuted2);
   };
   return (
-    <div className="bg-gray-100 pb-5">
+    <div id="home" className="bg-gray-100 pb-5">
       <div>
         {/* Hero Image */}
         <div className="mb-6">
