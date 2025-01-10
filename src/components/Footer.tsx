@@ -5,7 +5,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left Section: Slideshow */}
         <div className="flex justify-center md:justify-start">
-          <h1 className="text-5xl ">BIGWIG EVENTS</h1>
+          <h1 className="text-3xl md:text-5xl ">BIGWIG EVENTS</h1>
         </div>
 
         {/* Right Section: Content */}
