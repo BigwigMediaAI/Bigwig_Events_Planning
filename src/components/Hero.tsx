@@ -1,72 +1,98 @@
-import { useState } from "react";
-import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
-import intro from "../assets/Boston & NYC Wedding Planners & Event Planners Brilliant.mp4"
+import React, { useState, useEffect } from "react";
+import logo from "../assets/Capture-removebg-preview.png";
 
-const HeroSection = () => {
-  const [isMuted2, setisMuted2] = useState(true);
+const HeroSection: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const toggleMute = () => {
-    setisMuted2(!isMuted2);
+  // Define a more specific type for splitWords to avoid the TypeScript error
+  const splitWords: Record<string, [string, string]> = {
+    "Home": ["Home", ""],
+    "AboutUs": ["About", "Us"],
+    "BigEvents": ["Big", "Events"],
+    "BigFolio": ["Big", "Folio"],
+    "BigWeddings": ["Big", "Weddings"],
+    "BigAwards": ["Big", "Awards"],
+    "ContactUs": ["Contact", "Us"],
   };
+
+  const splitText = (text: string) => {
+    // Use the splitWords object with the correct types
+    const [firstPart, secondPart] = splitWords[text] || [text, ""];
+
+    return (
+      <>
+        <span className="text-white">{firstPart}</span>
+        <span className="text-yellow-400">{secondPart}</span>
+      </>
+    );
+  };
+
+  useEffect(() => {
+    // Listen for scroll events
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);  // Set isScrolled to true if scroll position is greater than 50px
+      } else {
+        setIsScrolled(false); // Set isScrolled to false if scroll position is less than 50px
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div id="home" className="bg-gray-100 pb-5">
-      <div>
-        {/* Hero Image */}
-        <div className="mb-6">
-          <img
-            src="https://images.squarespace-cdn.com/content/v1/585ac0bb414fb5eed215d4e3/1694627570727-4Z839ITBKYQUD67EZ9MI/52438307865_d0b07f02c1_o+%282%29.jpg?format=2500w"
-            alt="Bigwig Events"
-            className=" shadow-lg w-full"
-          />
+    <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: `url('https://images.squarespace-cdn.com/content/v1/585ac0bb414fb5eed215d4e3/1694627570727-4Z839ITBKYQUD67EZ9MI/52438307865_d0b07f02c1_o+%282%29.jpg?format=2500w')` }}>
+      {/* Navbar */}
+      <nav className={`fixed w-full px-8 py-2 text-white flex justify-between items-center z-10 transition-all duration-300 ${isScrolled ? 'bg-black bg-opacity-75' : ''}`}>
+        <div>
+          <img src={logo} alt="" className="w-44" />
         </div>
+        <div className="hidden md:flex space-x-8 text-lg font-semibold">
+          {["Home", "AboutUs", "BigEvents", "BigFolio", "BigWeddings", "BigAwards", "ContactUs"].map((item) => (
+            <a
+              key={item}
+              href={`#${item}`}
+              className="hover:text-yellow-400 transition-colors duration-300"
+            >
+              {splitText(item)}
+            </a>
+          ))}
+        </div>
+        {/* Hamburger Menu for Mobile */}
+        <div className="md:hidden">
+          <button onClick={() => setMenuOpen(!menuOpen)} className="text-yellow-400 focus:outline-none">
+            ☰
+          </button>
+        </div>
+      </nav>
 
-        <div className=" w-full h-full py-6 px-6 flex flex-col items-center justify-center text-justify md:text-center  text-teal-900">
-        <h1 className="text-3xl md:text-5xl mb-4">We are Bigwig.</h1>
-        <p className="text-md md:text-lg max-w-5xl">
-          Bigwig Events is a premier, luxury wedding and event planning company
-          serving NYC and Boston. We specialize in creating extraordinary,
-          tailor-made experiences for dynamic and discerning clients who value
-          elegance, creativity, and seamless execution.
-        </p>
-        <p className="text-md md:text-lg max-w-3xl mt-4">
-          At Bigwig, we draw inspiration from your vision and story,
-          transforming them into unforgettable events that leave a lasting
-          impression. Let us handle the details so you can focus on enjoying a
-          flawless and stress-free planning experience.
-        </p>
-      </div>
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="absolute top-14 left-0 w-full bg-black bg-opacity-75 text-white flex flex-col items-center space-y-4 py-4 md:hidden z-10">
+          {["Home", "AboutUs", "BigEvents", "BigFolio", "BigWeddings", "BigAwards", "ContactUs"].map((item) => (
+            <a
+              key={item}
+              href={`#${item}`}
+              className="hover:text-yellow-400 transition-colors duration-300"
+            >
+              {splitText(item)}
+            </a>
+          ))}
+        </div>
+      )}
 
-      <div className="max-w-5xl mx-auto px-3 rounded-lg overflow-hidden transform transition-all duration-300">
-                <video
-                  src={intro}
-                  className="w-full h-auto rounded-lg shadow-lg lazyload"
-                  autoPlay
-                  muted={isMuted2}
-                  loop
-                />
-
-                {/* Mute/Unmute Button */}
-                <button
-                  onClick={toggleMute}
-                  className="absolute top-4 left-4 bg-gray-100 bg-opacity-75 text-gray-800 rounded-full p-3 hover:bg-gray-100 focus:outline-none transition-all duration-300 flex items-center group"
-                >
-                  {/* Icon */}
-
-                  {isMuted2 ? (
-                    <FaVolumeMute className="text-sm md:text-2xl" />
-                  ) : (
-                    <FaVolumeUp className="text-sm md:text-2xl" />
-                  )}
-
-                  {/* Expanding Text */}
-                  <span
-                    className="ml-2 text-xl font-bold text-gray-800 overflow-hidden transition-all duration-300 ease-in-out max-w-0 opacity-0 group-hover:min-w-[6rem] group-hover:opacity-100
-    hidden sm:inline-block" // Hide on mobile, show on screens >= sm
-                  >
-                    {isMuted2 ? "Listen" : "Mute"}
-                  </span>
-                </button>
-              </div>
+      {/* Hero Content */}
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4 z-0 bg-black bg-opacity-50">
+        <h1 className="text-5xl lg:text-6xl font-extrabold mb-4">
+          <span className="text-yellow-400">Big</span>
+          <span className="text-white">Wigs Concept</span>
+        </h1>
+        <p className="text-2xl lg:text-3xl font-semibold">Mission Statement</p>
       </div>
     </div>
   );

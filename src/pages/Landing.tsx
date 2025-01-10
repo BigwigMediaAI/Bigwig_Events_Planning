@@ -35,7 +35,7 @@ function Landing() {
 
   return (
    <>
-   <NavBar/>
+   {/* <NavBar/> */}
    <HeroSection/>
     <FeatureSection/>
     <Wedding/>

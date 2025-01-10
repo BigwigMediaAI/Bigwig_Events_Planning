@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "../assets/Capture-removebg-preview.png"
 
 const Nav: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,12 +16,12 @@ const Nav: React.FC = () => {
   };
 
   return (
-    <nav className="bg-white sticky top-0 z-50">
+    <nav className=" sticky top-0 z-50 bg-[#101010]">
       <div className="container px-4 md:px-16 mx-auto flex justify-between items-center py-3">
         {/* Logo Section */}
         <div className="flex items-center font-semibold text-lg md:text-xl space-x-4">
           <button onClick={() => handleScroll("home")} className="text-teal-900">
-            BIGWIG EVENTS
+            <img src={logo} alt=""  className="w-36"/>
           </button>
         </div>
 
