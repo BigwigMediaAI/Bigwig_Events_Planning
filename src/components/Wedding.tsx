@@ -27,13 +27,13 @@ const images: ImageItem[] = [
 
 const Wedding: React.FC = () => {
   return (
-    <section id='weddings' className="py-16 px-4 lg:px-20 bg-gray-50 text-center">
+    <section id='weddings' className="pt-12 px-4 lg:px-20 bg-gray-50 text-center">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl lg:text-4xl font-semibold mb-6">Planning and Design</h2>
+        <h2 className="text-3xl font-semibold text-teal-900 mb-6">Planning and Design</h2>
         <p className="text-gray-600 mb-8">
           We offer wedding planning and design across New England from our studios in{" "}
-          <span className="text-blue-600 font-medium">New York City</span> and{" "}
-          <span className="text-blue-600 font-medium">Boston</span>. We also plan destination
+          <span className="text-pink-500 font-medium">New York City</span> and{" "}
+          <span className="text-pink-500 font-medium">Boston</span>. We also plan destination
           weddings across the United States, as well as abroad in places such as Mexico, the
           Caribbean, and Europe. Our recent destination weddings have brought us to Lake Tahoe,
           Napa, Charleston, The Maldives, and Savannah, to name a few.
@@ -43,7 +43,7 @@ const Wedding: React.FC = () => {
           private estates, and celebrations with multiple days of events. We believe that every
           wedding we plan and design should reflect our couple's unique love story and blend their
           families together. We love fusion weddings of all kinds, especially{" "}
-          <span className="text-blue-600 font-medium">Indian fusion weddings</span>.
+          <span className="text-pink-500 font-medium">Indian fusion weddings</span>.
         </p>
       </div>
 

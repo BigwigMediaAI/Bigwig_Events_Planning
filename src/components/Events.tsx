@@ -32,12 +32,12 @@ const images: ImageItem[] = [
 
 const Events: React.FC = () => {
   return (
-    <section id='events' className="py-16 px-4 lg:px-20 bg-gray-50 text-center">
+    <section id='events' className="pt-12 px-4 lg:px-20 bg-gray-50 text-center">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl lg:text-4xl font-semibold mb-6">PARTIES AND CELEBRATIONS</h2>
+        <h2 className="text-3xl font-semibold text-teal-900 mb-6">PARTIES AND CELEBRATIONS</h2>
         <p className="text-gray-600 mb-8">
-        We plan and design bespoke parties and social events across New England and have offices in          <span className="text-blue-600 font-medium">Boston</span> and{" "}
-         and <span className="text-blue-600 font-medium">New York City</span>. Our portfolio includes festive baby showers, elegant bridal showers, romantic engagement parties, intimate marriage proposals, exclusive dinners, corporate parties, modern mitzvahs, and trendy quinceañeras. If you can celebrate it, our event planners can create it! 
+        We plan and design bespoke parties and social events across New England and have offices in          <span className="text-pink-500 font-medium">Boston</span> and{" "}
+         and <span className="text-pink-500 font-medium">New York City</span>. Our portfolio includes festive baby showers, elegant bridal showers, romantic engagement parties, intimate marriage proposals, exclusive dinners, corporate parties, modern mitzvahs, and trendy quinceañeras. If you can celebrate it, our event planners can create it! 
           </p>
       </div>
 
