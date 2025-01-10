@@ -6,6 +6,8 @@ import FollowUsSection from "../components/Followus"
 import Services from "../components/Services"
 import About from "../components/About"
 import { useEffect, useState } from "react"
+import Wedding from "../components/Wedding"
+import Events from "../components/Events"
 
 function Landing() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,6 +38,8 @@ function Landing() {
    <NavBar/>
    <HeroSection/>
     <FeatureSection/>
+    <Wedding/>
+    <Events/>
     <Services/>
     <FollowUsSection/>
     <About/>
