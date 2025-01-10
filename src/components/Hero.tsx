@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/Capture-removebg-preview.png";
+import bg from "../assets/background.webp"
+
 
 const HeroSection: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,7 +48,7 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: `url('https://images.squarespace-cdn.com/content/v1/585ac0bb414fb5eed215d4e3/1694627570727-4Z839ITBKYQUD67EZ9MI/52438307865_d0b07f02c1_o+%282%29.jpg?format=2500w')` }}>
+    <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: `url(${bg})` }}>
       {/* Navbar */}
       <nav className={`fixed w-full px-8 py-2 text-white flex justify-between items-center z-10 transition-all duration-300 ${isScrolled ? 'bg-black bg-opacity-75' : ''}`}>
         <div>
