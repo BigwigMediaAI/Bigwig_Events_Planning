@@ -52,7 +52,7 @@ const HeroSection: React.FC = () => {
       {/* Navbar */}
       <nav className={`fixed w-full px-8 py-2 text-white flex justify-between items-center z-10 transition-all duration-300 ${isScrolled ? 'bg-black bg-opacity-75' : ''}`}>
         <div>
-          <img src={logo} alt="" className="w-44" />
+          <img src={logo} alt="" className="w-64" />
         </div>
         <div className="hidden md:flex space-x-8 text-lg font-semibold">
           {["Home", "AboutUs", "BigEvents", "BigFolio", "BigWeddings", "BigAwards", "ContactUs"].map((item) => (
