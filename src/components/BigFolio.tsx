@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import img1 from "../assets/DB2A5526.webp"
 import img2 from "../assets/DB2A5541.webp"
 import img3 from "../assets/DSC_0074.webp"
@@ -39,6 +39,8 @@ import img37 from "../assets/_MG_5119.webp"
 import img38 from "../assets/_MG_5156.webp"
 import img39 from "../assets/_MG_5260.webp"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import logo from "../assets/Capture-removebg-preview.png"
+import bg from "../assets/background.webp";
 
 
 
@@ -247,8 +249,49 @@ const images: ImageItem[] = [
     // Add more images here
   ];
 
+   
+
 const BigFolio: React.FC = () => {
+
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    useEffect(() => {
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 50);
+      };
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
+    
   return (
+    <div>
+        <div  className="bg-black bg-opacity-50 relative h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${bg})` }}>
+        <nav
+        className={`fixed w-full px-8 py-2 text-white flex justify-between items-center z-10 transition-all duration-300 ${
+          isScrolled ? "bg-black bg-opacity-65" : ""
+        }`}
+      >
+        <div>
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-44 md:w-52 cursor-pointer"
+          
+          />
+        </div>
+
+        <div
+        className="absolute inset-0 flex flex-col justify-center items-center text-center text-gray-300 px-4 z-0"
+      >
+      </div>
+        
+      </nav>
+        </div>
+       
+    
     <section id='weddings' className="pt-12 px-4 lg:px-20 bg-gray-50 text-center">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl font-semibold text-teal-900 mb-6">Planning and Design</h2>
@@ -270,13 +313,13 @@ const BigFolio: React.FC = () => {
       </div>
 
       {/* Image Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {images.map((image, index) => (
           <div key={index} className="relative">
             <LazyLoadImage
               src={image.src}
               alt={image.alt}
-              className="w-96 h-[500px] rounded-lg"
+              className="w-96 h-[400px] rounded-lg"
               delayTime={30}
               threshold={100}
             />
@@ -287,6 +330,7 @@ const BigFolio: React.FC = () => {
         ))}
       </div>
     </section>
+    </div>
   );
 };
 
