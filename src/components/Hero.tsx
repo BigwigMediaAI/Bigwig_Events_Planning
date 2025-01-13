@@ -28,6 +28,16 @@ const HeroSection: React.FC = () => {
     );
   };
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -80; // Adjust based on your navbar height
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+    setMenuOpen(false); // Close menu after navigation in mobile view
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -39,7 +49,7 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <div
+    <div id="home"
       className="bg-black bg-opacity-50 relative h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${bg})` }}
     >
@@ -50,7 +60,12 @@ const HeroSection: React.FC = () => {
         }`}
       >
         <div>
-          <img src={logo} alt="Logo" className="w-44 md:w-52" />
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-44 md:w-52 cursor-pointer"
+            onClick={() => scrollToSection("top")}
+          />
         </div>
         <div className="hidden md:flex space-x-8 text-lg font-semibold relative">
           {[
@@ -69,8 +84,8 @@ const HeroSection: React.FC = () => {
               onMouseLeave={() => item === "BigEvents" && setBigEventsOpen(false)}
             >
               <a
-                href={`#${item}`}
-                className="hover:text-yellow-400 transition-colors duration-300"
+                onClick={() => scrollToSection(item.toLowerCase())}
+                className="cursor-pointer hover:text-yellow-400 transition-colors duration-300"
               >
                 {splitText(item)}
               </a>
@@ -103,7 +118,7 @@ const HeroSection: React.FC = () => {
                     </li>
                     <li>
                       <a
-                        href="#event3"
+                        href="#event4"
                         className="block hover:text-yellow-400 transition-colors"
                       >
                         Corporate Training
@@ -111,7 +126,7 @@ const HeroSection: React.FC = () => {
                     </li>
                     <li>
                       <a
-                        href="#event3"
+                        href="#event5"
                         className="block hover:text-yellow-400 transition-colors"
                       >
                         Corporate Festivities
@@ -135,41 +150,40 @@ const HeroSection: React.FC = () => {
       </nav>
 
       {/* Mobile Menu */}
-      {/* Mobile Menu */}
-{menuOpen && (
-  <div className="fixed top-20 left-0 w-full bg-black bg-opacity-90 text-white flex flex-col items-center space-y-4 py-4 z-20">
-    {[
-      "Home",
-      "AboutUs",
-      "BigEvents",
-      "BigFolio",
-      "BigWeddings",
-      "BigAwards",
-      "ContactUs",
-    ].map((item) => (
-      <a
-        key={item}
-        href={`#${item}`}
-        className="hover:text-yellow-400 transition-colors duration-300"
-      >
-        {splitText(item)}
-      </a>
-    ))}
-  </div>
-)}
-
+      {menuOpen && (
+        <div className="fixed top-20 left-0 w-full bg-black bg-opacity-90 text-white flex flex-col items-center space-y-4 py-4 z-20">
+          {[
+            "Home",
+            "AboutUs",
+            "BigEvents",
+            "BigFolio",
+            "BigWeddings",
+            "BigAwards",
+            "ContactUs",
+          ].map((item) => (
+            <a
+              key={item}
+              onClick={() => scrollToSection(item.toLowerCase())}
+              className="cursor-pointer hover:text-yellow-400 transition-colors duration-300"
+            >
+              {splitText(item)}
+            </a>
+          ))}
+        </div>
+      )}
 
       {/* Hero Content */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-gray-300 px-4 z-0 bg-black bg-opacity-50">
+      <div
+        id="top"
+        className="absolute inset-0 flex flex-col justify-center items-center text-center text-gray-300 px-4 z-0 bg-black bg-opacity-50"
+      >
         <h1 className="text-3xl md:text-5xl font-bold">
           <Typewriter
             options={{
-              strings: [
-                "Big Moments, Big Memories - Crafted Just for You",
-              ],
+              strings: ["Big Moments, Big Memories - Crafted Just for You"],
               autoStart: true,
               loop: true,
-              deleteSpeed:50,
+              deleteSpeed: 50,
             }}
           />
         </h1>
