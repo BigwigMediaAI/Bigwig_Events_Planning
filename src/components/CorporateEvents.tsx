@@ -56,7 +56,7 @@ const CorporateEvents: React.FC = () => {
       <p className="text-center text-gray-600 mb-12">
         From rewards and recognition to product launches, we deliver exceptional corporate events tailored to your needs.
       </p>
-      <div className="space-y-12">
+      <div className="space-y-12 max-w-6xl mx-auto">
         {subsections.map((section, index) => (
           <div
             key={index}

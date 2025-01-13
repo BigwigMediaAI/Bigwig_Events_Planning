@@ -4,6 +4,7 @@ import FollowUsSection from "../components/Followus"
 import About from "../components/About"
 import { useEffect, useState } from "react"
 import CorporateEvents from "../components/CorporateEvents"
+import CorporateActivationsATLBTL from "../components/CorporateActivations"
 
 function Landing() {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,6 +36,7 @@ function Landing() {
    <HeroSection/>
    <About/>
    <CorporateEvents/>
+   <CorporateActivationsATLBTL/>
     <FollowUsSection/>
     
    <Footer/>
