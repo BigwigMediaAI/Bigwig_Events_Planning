@@ -55,7 +55,7 @@ const HeroSection: React.FC = () => {
     >
       {/* Navbar */}
       <nav
-        className={`fixed w-full px-8 py-2 text-white flex justify-between items-center z-10 transition-all duration-300 ${
+        className={`fixed w-full px-8 py-2 text-white flex justify-between items-center z-40 transition-all duration-300 ${
           isScrolled ? "bg-black bg-opacity-65" : ""
         }`}
       >
