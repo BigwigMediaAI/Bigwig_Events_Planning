@@ -268,34 +268,11 @@ const BigFolio: React.FC = () => {
     
   return (
     <div id="bigfolio" className=" mt-10">
-        {/* <div  className="bg-black bg-opacity-50 relative h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${bg})` }}>
-        <nav
-        className={`fixed w-full px-8 py-2 text-white flex justify-between items-center z-10 transition-all duration-300 ${
-          isScrolled ? "bg-black bg-opacity-65" : ""
-        }`}
-      >
-        <div>
-          <img
-            src={logo}
-            alt="Logo"
-            className="w-44 md:w-36 cursor-pointer"
-          
-          />
-        </div>
-
-        <div
-        className="absolute inset-0 flex flex-col justify-center items-center text-center text-gray-300 px-4 z-0"
-      >
-      </div>
-        
-      </nav>
-        </div> */}
         <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
         Gallery View
       </h1>
     
-        <section className="relative bg-black py-12">
+        <section className="relative bg-black py-5">
   <div className="flex items-center justify-center space-x-6">
     {/* Prev Button */}
     <button
@@ -322,7 +299,7 @@ const BigFolio: React.FC = () => {
             <LazyLoadImage
               src={image.src}
               alt={image.alt}
-              className="rounded-lg max-w-5xl h-[600px] "
+              className="rounded-lg max-w-7xl h-[500px] "
             />
           </div>
         ))}
@@ -343,8 +320,8 @@ const BigFolio: React.FC = () => {
     {images.map((_, index) => (
       <button
         key={index}
-        className={`w-4 h-4 rounded-full ${
-          index === currentIndex ? "bg-white" : "bg-gray-500 hover:bg-white"
+        className={`w-4 h-2 rounded-full ${
+          index === currentIndex ? "bg-yellow-400" : "bg-gray-500 hover:bg-yellow-400"
         }`}
         onClick={() => setCurrentIndex(index)}
       ></button>

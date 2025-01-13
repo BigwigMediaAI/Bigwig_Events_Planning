@@ -6,6 +6,9 @@ import { useEffect, useState } from "react"
 import CorporateEvents from "../components/CorporateEvents"
 import CorporateActivationsATLBTL from "../components/CorporateActivations"
 import BigFolio from "../components/BigFolio"
+import CorporateTravels from "../components/CorporateTravels"
+import CorporateTraining from "../components/CorporateTraining"
+import CorporateFestivities from "../components/CorporateFestivities"
 
 function Landing() {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,6 +41,9 @@ function Landing() {
    <About/>
    <CorporateEvents/>
    <CorporateActivationsATLBTL/>
+   <CorporateTravels/>
+   <CorporateTraining/>
+   <CorporateFestivities/>
    <BigFolio/>
     <FollowUsSection/>
     
