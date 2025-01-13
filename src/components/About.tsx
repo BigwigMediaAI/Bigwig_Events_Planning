@@ -1,7 +1,7 @@
 
 const AboutSection = () => {
   return (
-    <div className="relative bg-black text-white">
+    <div id="aboutus" className="relative bg-black text-white">
       {/* Top Triangle (Pointing Down) */}
       <div
         className="absolute top-0 left-0 w-full bg-black"
