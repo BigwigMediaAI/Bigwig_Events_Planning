@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
         }`}
       >
         <div>
-          <img src={logo} alt="Logo" className="w-44 md:w-60" />
+          <img src={logo} alt="Logo" className="w-44 md:w-52" />
         </div>
         <div className="hidden md:flex space-x-8 text-lg font-semibold relative">
           {[
@@ -158,7 +158,7 @@ const HeroSection: React.FC = () => {
       )}
 
       {/* Hero Content */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4 z-0 bg-black bg-opacity-50">
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-gray-300 px-4 z-0 bg-black bg-opacity-50">
         <h1 className="text-3xl md:text-5xl font-bold">
           <Typewriter
             options={{
@@ -167,6 +167,7 @@ const HeroSection: React.FC = () => {
               ],
               autoStart: true,
               loop: true,
+              deleteSpeed:50,
             }}
           />
         </h1>
