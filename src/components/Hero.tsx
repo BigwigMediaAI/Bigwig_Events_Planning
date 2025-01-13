@@ -135,27 +135,29 @@ const HeroSection: React.FC = () => {
       </nav>
 
       {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="absolute top-14 left-0 w-full bg-black bg-opacity-65 text-white flex flex-col items-center space-y-4 py-4 md:hidden z-10">
-          {[
-            "Home",
-            "AboutUs",
-            "BigEvents",
-            "BigFolio",
-            "BigWeddings",
-            "BigAwards",
-            "ContactUs",
-          ].map((item) => (
-            <a
-              key={item}
-              href={`#${item}`}
-              className="hover:text-yellow-400 transition-colors duration-300"
-            >
-              {splitText(item)}
-            </a>
-          ))}
-        </div>
-      )}
+      {/* Mobile Menu */}
+{menuOpen && (
+  <div className="fixed top-20 left-0 w-full bg-black bg-opacity-90 text-white flex flex-col items-center space-y-4 py-4 z-20">
+    {[
+      "Home",
+      "AboutUs",
+      "BigEvents",
+      "BigFolio",
+      "BigWeddings",
+      "BigAwards",
+      "ContactUs",
+    ].map((item) => (
+      <a
+        key={item}
+        href={`#${item}`}
+        className="hover:text-yellow-400 transition-colors duration-300"
+      >
+        {splitText(item)}
+      </a>
+    ))}
+  </div>
+)}
+
 
       {/* Hero Content */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-gray-300 px-4 z-0 bg-black bg-opacity-50">
