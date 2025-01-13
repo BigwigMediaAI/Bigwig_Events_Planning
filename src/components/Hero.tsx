@@ -94,44 +94,44 @@ const HeroSection: React.FC = () => {
                   <ul className="space-y-2">
                     <li>
                       <a
-                        href="#event1"
-                        className="block hover:text-yellow-400 transition-colors"
+                        onClick={() => scrollToSection("event1")}
+                        className="block hover:text-yellow-400 transition-colors cursor-pointer"
                       >
                         Corporate Events
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="#event2"
-                        className="block hover:text-yellow-400 transition-colors"
-                      >
-                        Corporate Activations
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#event3"
-                        className="block hover:text-yellow-400 transition-colors"
-                      >
-                        Corporate Travels
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#event4"
-                        className="block hover:text-yellow-400 transition-colors"
-                      >
-                        Corporate Training
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#event5"
-                        className="block hover:text-yellow-400 transition-colors"
-                      >
-                        Corporate Festivities
-                      </a>
-                    </li>
+        <a
+          onClick={() => scrollToSection("event2")}
+          className="block hover:text-yellow-400 transition-colors cursor-pointer"
+        >
+          Corporate Activations
+        </a>
+      </li>
+      <li>
+        <a
+          onClick={() => scrollToSection("event3")}
+          className="block hover:text-yellow-400 transition-colors cursor-pointer"
+        >
+          Corporate Travels
+        </a>
+      </li>
+      <li>
+        <a
+          onClick={() => scrollToSection("event4")}
+          className="block hover:text-yellow-400 transition-colors cursor-pointer"
+        >
+          Corporate Training
+        </a>
+      </li>
+      <li>
+        <a
+          onClick={() => scrollToSection("event5")}
+          className="block hover:text-yellow-400 transition-colors cursor-pointer"
+        >
+          Corporate Festivities
+        </a>
+      </li>
                   </ul>
                 </div>
               )}
