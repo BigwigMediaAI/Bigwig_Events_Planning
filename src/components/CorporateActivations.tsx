@@ -45,7 +45,7 @@ const CorporateActivationsATLBTL: React.FC = () => {
   return (
     <div id="event2" className="bg-gray-100 py-8 px-4 ">
       <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
-        Corporate Activations: ATL & BTL
+        Corporate Activations
       </h1>
       <p className="text-center text-gray-600 mb-12">
         Whether it's ATL for mass outreach or BTL for personalized engagement, we help execute impactful corporate activations.
