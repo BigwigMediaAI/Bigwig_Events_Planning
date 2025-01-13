@@ -292,7 +292,7 @@ const BigFolio: React.FC = () => {
           <img
             src={logo}
             alt="Logo"
-            className="w-44 md:w-52 cursor-pointer"
+            className="w-44 md:w-36 cursor-pointer"
           
           />
         </div>
