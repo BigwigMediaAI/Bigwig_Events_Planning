@@ -255,6 +255,20 @@ const BigFolio: React.FC = () => {
 
     const [isScrolled, setIsScrolled] = useState(false)
 
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const nextImage = () => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    };
+    
+    const prevImage = () => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      );
+    };
+
     useEffect(() => {
       const handleScroll = () => {
         setIsScrolled(window.scrollY > 50);
@@ -292,44 +306,62 @@ const BigFolio: React.FC = () => {
         </div>
        
     
-    <section id='weddings' className="pt-12 px-4 lg:px-20 bg-gray-50 text-center">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-semibold text-teal-900 mb-6">Planning and Design</h2>
-        <p className="text-gray-600 mb-8">
-          We offer wedding planning and design across New England from our studios in{" "}
-          <span className="text-pink-500 font-medium">New York City</span> and{" "}
-          <span className="text-pink-500 font-medium">Boston</span>. We also plan destination
-          weddings across the United States, as well as abroad in places such as Mexico, the
-          Caribbean, and Europe. Our recent destination weddings have brought us to Lake Tahoe,
-          Napa, Charleston, The Maldives, and Savannah, to name a few.
-        </p>
-        <p className="text-gray-600 mb-12">
-          We’re known for seamlessly orchestrating complex events, with a focus on tents, raw space,
-          private estates, and celebrations with multiple days of events. We believe that every
-          wedding we plan and design should reflect our couple's unique love story and blend their
-          families together. We love fusion weddings of all kinds, especially{" "}
-          <span className="text-pink-500 font-medium">Indian fusion weddings</span>.
-        </p>
-      </div>
+        <section className="relative bg-black py-12">
+  <div className="flex items-center justify-center space-x-6">
+    {/* Prev Button */}
+    <button
+      onClick={prevImage}
+      className="p-2 rounded-full bg-white shadow-md z-10"
+    >
+      ◀
+    </button>
 
-      {/* Image Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    {/* Carousel Container */}
+    <div className="overflow-hidden w-full">
+      <div
+        className="flex transition-transform duration-700 ease-in-out"
+        style={{
+          transform: `translateX(-${currentIndex * 100}%)`,
+          
+        }}
+      >
         {images.map((image, index) => (
-          <div key={index} className="relative">
+          <div
+            key={index}
+            className="w-full flex-shrink-0 flex justify-center items-center relative"
+          >
             <LazyLoadImage
               src={image.src}
               alt={image.alt}
-              className="w-96 h-[400px] rounded-lg"
-              delayTime={30}
-              threshold={100}
+              className="rounded-lg max-w-5xl h-[600px] "
             />
-            {/* <div className="px-3 py-1 text-sm font-medium rounded shadow">
-              {image.label}
-            </div> */}
           </div>
         ))}
       </div>
-    </section>
+    </div>
+
+    {/* Next Button */}
+    <button
+      onClick={nextImage}
+      className="p-2 rounded-full bg-white shadow-md z-10"
+    >
+      ▶
+    </button>
+  </div>
+
+  {/* Dots Navigation */}
+  <div className="flex justify-center mt-4 space-x-2">
+    {images.map((_, index) => (
+      <button
+        key={index}
+        className={`w-4 h-4 rounded-full ${
+          index === currentIndex ? "bg-white" : "bg-gray-500 hover:bg-white"
+        }`}
+        onClick={() => setCurrentIndex(index)}
+      ></button>
+    ))}
+  </div>
+</section>
     </div>
   );
 };
