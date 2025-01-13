@@ -1,12 +1,8 @@
 import Footer from "../components/Footer"
 import HeroSection from "../components/Hero"
-import FeatureSection from "../components/Features"
 import FollowUsSection from "../components/Followus"
-import Services from "../components/Services"
 import About from "../components/About"
 import { useEffect, useState } from "react"
-import Wedding from "../components/Wedding"
-import Events from "../components/Events"
 
 function Landing() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,12 +32,9 @@ function Landing() {
    <>
    {/* <NavBar/> */}
    <HeroSection/>
-    <FeatureSection/>
-    <Wedding/>
-    <Events/>
-    <Services/>
+   <About/>
     <FollowUsSection/>
-    <About/>
+    
    <Footer/>
      {/* Scroll Top Button - Conditionally Visible */}
      <div className="fixed bottom-10 right-2 flex flex-col items-center space-y-4 z-50">
