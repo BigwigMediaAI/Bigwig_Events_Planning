@@ -5,6 +5,7 @@ import About from "../components/About"
 import { useEffect, useState } from "react"
 import CorporateEvents from "../components/CorporateEvents"
 import CorporateActivationsATLBTL from "../components/CorporateActivations"
+import BigFolio from "../components/BigFolio"
 
 function Landing() {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,6 +38,7 @@ function Landing() {
    <About/>
    <CorporateEvents/>
    <CorporateActivationsATLBTL/>
+   <BigFolio/>
     <FollowUsSection/>
     
    <Footer/>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import img1 from "../assets/DB2A5526.webp"
 import img2 from "../assets/DB2A5541.webp"
 import img3 from "../assets/DSC_0074.webp"
@@ -39,9 +39,6 @@ import img37 from "../assets/_MG_5119.webp"
 import img38 from "../assets/_MG_5156.webp"
 import img39 from "../assets/_MG_5260.webp"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import logo from "../assets/Capture-removebg-preview.png"
-import bg from "../assets/background.webp";
-
 
 
 interface ImageItem {
@@ -253,7 +250,6 @@ const images: ImageItem[] = [
 
 const BigFolio: React.FC = () => {
 
-    const [isScrolled, setIsScrolled] = useState(false)
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -269,19 +265,10 @@ const BigFolio: React.FC = () => {
       );
     };
 
-    useEffect(() => {
-      const handleScroll = () => {
-        setIsScrolled(window.scrollY > 50);
-      };
-      window.addEventListener("scroll", handleScroll);
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, []);
     
   return (
-    <div>
-        <div  className="bg-black bg-opacity-50 relative h-screen bg-cover bg-center"
+    <div id="bigfolio" className=" mt-10">
+        {/* <div  className="bg-black bg-opacity-50 relative h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${bg})` }}>
         <nav
         className={`fixed w-full px-8 py-2 text-white flex justify-between items-center z-10 transition-all duration-300 ${
@@ -303,8 +290,10 @@ const BigFolio: React.FC = () => {
       </div>
         
       </nav>
-        </div>
-       
+        </div> */}
+        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
+        Gallery View
+      </h1>
     
         <section className="relative bg-black py-12">
   <div className="flex items-center justify-center space-x-6">
