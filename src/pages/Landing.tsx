@@ -3,6 +3,7 @@ import HeroSection from "../components/Hero"
 import FollowUsSection from "../components/Followus"
 import About from "../components/About"
 import { useEffect, useState } from "react"
+import Wedding from "../components/Wedding"
 
 function Landing() {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,6 +34,7 @@ function Landing() {
    {/* <NavBar/> */}
    <HeroSection/>
    <About/>
+   <Wedding/>
     <FollowUsSection/>
     
    <Footer/>
