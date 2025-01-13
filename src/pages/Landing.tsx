@@ -3,8 +3,8 @@ import HeroSection from "../components/Hero"
 import FollowUsSection from "../components/Followus"
 import About from "../components/About"
 import { useEffect, useState } from "react"
-import Wedding from "../components/Wedding"
 import CorporateEvents from "../components/CorporateEvents"
+import BigFolio from "../components/BigFolio"
 
 function Landing() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,7 +36,7 @@ function Landing() {
    <HeroSection/>
    <About/>
    <CorporateEvents/>
-   <Wedding/>
+   <BigFolio/>
     <FollowUsSection/>
     
    <Footer/>
