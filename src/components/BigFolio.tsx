@@ -323,7 +323,7 @@ const BigFolio: React.FC = () => {
   </div>
 
   {/* Dots Navigation */}
-  <div className="flex justify-center mt-4 space-x-2">
+  <div className="hidden md:flex justify-center mt-4 space-x-2">
     {images.map((_, index) => (
       <button
         key={index}
