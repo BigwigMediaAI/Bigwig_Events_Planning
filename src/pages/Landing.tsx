@@ -36,7 +36,6 @@ function Landing() {
    <HeroSection/>
    <About/>
    <CorporateEvents/>
-   <BigFolio/>
     <FollowUsSection/>
     
    <Footer/>

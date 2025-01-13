@@ -38,6 +38,8 @@ import img36 from "../assets/_MG_5102.webp"
 import img37 from "../assets/_MG_5119.webp"
 import img38 from "../assets/_MG_5156.webp"
 import img39 from "../assets/_MG_5260.webp"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 
 interface ImageItem {
@@ -271,10 +273,12 @@ const BigFolio: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {images.map((image, index) => (
           <div key={index} className="relative">
-            <img
+            <LazyLoadImage
               src={image.src}
               alt={image.alt}
               className="w-96 h-[500px] rounded-lg"
+              delayTime={30}
+              threshold={100}
             />
             {/* <div className="px-3 py-1 text-sm font-medium rounded shadow">
               {image.label}
