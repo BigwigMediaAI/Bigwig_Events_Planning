@@ -4,7 +4,6 @@ import FollowUsSection from "../components/Followus"
 import About from "../components/About"
 import { useEffect, useState } from "react"
 import CorporateEvents from "../components/CorporateEvents"
-import BigFolio from "../components/BigFolio"
 
 function Landing() {
   const [isVisible, setIsVisible] = useState(false);
