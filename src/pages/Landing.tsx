@@ -42,10 +42,10 @@ function Landing() {
    <HeroSection/>
    <About/>
    <CorporateEvents/>
-   <CorporateActivationsATLBTL/>
    <CorporateTravels/>
    <CorporateTraining/>
    <CorporateFestivities/>
+   <CorporateActivationsATLBTL/>
    <BigFolio/>
    <WeddingSection/>
    <AwardsSection/>
