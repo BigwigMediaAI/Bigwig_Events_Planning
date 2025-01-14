@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"; // Replace with actual images
-import teamBuildingImage1 from "../assets/background.webp"; // Replace with actual images
-import teamBuildingImage2 from "../assets/background.webp"; // Replace with actual images
+import teamBuildingImage1 from "../assets/Hero/TEAM.webp"; // Replace with actual images
+import teamBuildingImage2 from "../assets/Hero/TEAM2.webp"; // Replace with actual images
+import teamBuildingImage3 from "../assets/Hero/TEAM3.webp"; // Replace with actual images
 
 const CorporateTraining: React.FC = () => {
   const subsections = [
@@ -8,7 +9,7 @@ const CorporateTraining: React.FC = () => {
       title: "Team Building",
       description:
         "Strengthen team spirit and collaboration through our dynamic team-building programs. From fun challenges to strategic activities, we create memorable and effective experiences.",
-      images: [teamBuildingImage1, teamBuildingImage2],
+      images: [teamBuildingImage1, teamBuildingImage2,teamBuildingImage3],
     },
   ];
 

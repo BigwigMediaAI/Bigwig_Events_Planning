@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import miceImage1 from "../assets/background.webp";
-import miceImage2 from "../assets/background.webp";
-import offsiteImage1 from "../assets/background.webp";
-import offsiteImage2 from "../assets/background.webp";
+import miceImage1 from "../assets/Hero/MICE.webp";
+import miceImage2 from "../assets/Hero/MICE2.webp";
+import miceImage3 from "../assets/Hero/MICE3.webp";
+import offsiteImage1 from "../assets/Hero/OFSITE.webp";
+import offsiteImage2 from "../assets/Hero/OFSITE1.webp";
+import offsiteImage3 from "../assets/Hero/OFSITE2.webp";
 import domesticImage1 from "../assets/background.webp";
 import domesticImage2 from "../assets/background.webp";
 
@@ -12,13 +14,13 @@ const CorporateTravels: React.FC = () => {
       title: "MICE (Meetings, Incentives, Conferences, Exhibitions)",
       description:
         "Organize world-class MICE events that are tailored to your company's needs. From venue selection to event management, we've got you covered.",
-      images: [miceImage1, miceImage2],
+      images: [miceImage1, miceImage2,miceImage3],
     },
     {
       title: "Offsites",
       description:
         "Plan team-building retreats and offsite activities to foster collaboration and boost morale. We make your offsites unforgettable.",
-      images: [offsiteImage1, offsiteImage2],
+      images: [offsiteImage1, offsiteImage2,offsiteImage3],
     },
     {
       title: "Domestic Travel Packages",

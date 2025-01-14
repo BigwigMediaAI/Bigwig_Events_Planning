@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import atlImage1 from "../assets/background.webp"; // Replace with actual images
-import atlImage2 from "../assets/DB2A5526.webp"; // Replace with actual images
-import btlImage1 from "../assets/background.webp"; // Replace with actual images
-import btlImage2 from "../assets/background.webp"; // Replace with actual images
+import atlImage1 from "../assets/Hero/ATL.webp"; // Replace with actual images
+import atlImage2 from "../assets/Hero/ATL1.webp"; // Replace with actual images
+import atlImage3 from "../assets/Hero/ATL2.webp"; // Replace with actual images
+import btlImage1 from "../assets/Hero/BTL.webp"; // Replace with actual images
+import btlImage2 from "../assets/Hero/BTL1.webp"; // Replace with actual images
+import btlImage3 from "../assets/Hero/BTL2.webp"; // Replace with actual images
 
 const CorporateActivationsATLBTL: React.FC = () => {
   const subsections = [
@@ -10,7 +12,7 @@ const CorporateActivationsATLBTL: React.FC = () => {
       title: "ATL (Above the Line) Activations",
       description:
         "Reach a larger audience with mass media channels. From TV ads to print media, ATL strategies are perfect for brand awareness.",
-      images: [atlImage1, atlImage2],
+      images: [atlImage1, atlImage2,atlImage3],
       listItems: [
         "TV Campaigns",
         "Radio Advertisements",
@@ -22,7 +24,7 @@ const CorporateActivationsATLBTL: React.FC = () => {
       title: "BTL (Below the Line) Activations",
       description:
         "Engage directly with your audience through personalized experiences. BTL activations include events, promotions, and direct mail.",
-      images: [btlImage1, btlImage2],
+      images: [btlImage1, btlImage2,btlImage3],
       listItems: [
         "Direct Mail Campaigns",
         "Event Sponsorships",

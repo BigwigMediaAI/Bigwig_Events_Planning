@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
-import decorImage1 from "../assets/background.webp"; // Replace with actual images
-import decorImage2 from "../assets/background.webp"; // Replace with actual images
-import partyImage1 from "../assets/background.webp"; // Replace with actual images
-import partyImage2 from "../assets/background.webp"; // Replace with actual images
-import partyImage3 from "../assets/background.webp"; // Replace with actual images
+import decorImage1 from "../assets/Hero/Decor.webp"; // Replace with actual images
+import decorImage2 from "../assets/Hero/Decor2.webp"; // Replace with actual images
+import decorImage3 from "../assets/Hero/Decor3.webp"; // Replace with actual images
+import partyImage1 from "../assets/Hero/parties.webp"; // Replace with actual images
+import partyImage2 from "../assets/Hero/parties2.webp"; // Replace with actual images
+import partyImage3 from "../assets/Hero/parties3.webp"; // Replace with actual images
 
 const CorporateFestivities: React.FC = () => {
   const subsections = [
     {
-      title: "Office Décor",
+      title: "Office Decor",
       description:
         "Transform your workplace into a festive haven with our expert office décor services. From vibrant themes to intricate details, we create a captivating ambiance for every occasion.",
-      images: [decorImage1, decorImage2],
+      images: [decorImage1, decorImage2,decorImage3],
     },
     {
       title: "Parties",

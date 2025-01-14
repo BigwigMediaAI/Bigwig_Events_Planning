@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
-import rnrImage1 from "../assets/background.webp";
-import rnrImage2 from "../assets/Capture-removebg-preview.png";
-import rnrImage3 from "../assets/background.webp";
-import awardsImage1 from "../assets/background.webp";
-import awardsImage2 from "../assets/background.webp";
-import productLaunchImage1 from "../assets/background.webp";
-import productLaunchImage2 from "../assets/background.webp";
+import rnrImage1 from "../assets/Hero/RR2.webp";
+import rnrImage2 from "../assets/Hero/RR.webp";
+import rnrImage3 from "../assets/Hero/awards2.webp";
+import awardsImage1 from "../assets/Hero/awards.webp";
+import awardsImage3 from "../assets/Hero/RR4.webp";
+import productLaunchImage1 from "../assets/Hero/productlaunch.webp";
+import productLaunchImage2 from "../assets/Hero/productlaunch2.webp";
+import productLaunchImage3 from "../assets/Hero/productlaunch3.webp";
+import productLaunchImage4 from "../assets/Hero/productlaunch4.webp";
 import townhallsImage1 from "../assets/background.webp";
-import townhallsImage2 from "../assets/background.webp";
-import townhallsImage3 from "../assets/background.webp";
+import townhallsImage2 from "../assets/Hero/town1.webp";
+import townhallsImage3 from "../assets/Hero/town2.webp";
+import townhallsImage4 from "../assets/Hero/town3.webp";
 
 const CorporateEvents: React.FC = () => {
   const subsections = [
@@ -22,19 +25,19 @@ const CorporateEvents: React.FC = () => {
       title: "🏆 Awards",
       description:
         "Host glamorous award ceremonies to honor excellence. From stunning stages to engaging themes, we bring your vision to life.",
-      images: [awardsImage1, awardsImage2],
+      images: [awardsImage1,awardsImage3],
     },
     {
       title: "🚀 Product Launch",
       description:
         "Unveil your latest innovations with style. Our team ensures a flawless launch event that leaves a lasting impression.",
-      images: [productLaunchImage1, productLaunchImage2],
+      images: [productLaunchImage1,productLaunchImage2,productLaunchImage3,productLaunchImage4],
     },
     {
       title: "📢 Townhalls",
       description:
         "Engage and connect with your team in impactful townhalls. From professional setups to seamless execution, we handle it all.",
-      images: [townhallsImage1, townhallsImage2, townhallsImage3],
+      images: [townhallsImage1, townhallsImage2, townhallsImage3,townhallsImage4],
     },
   ];
 
