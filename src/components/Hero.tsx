@@ -63,7 +63,7 @@ const HeroSection: React.FC = () => {
           <img
             src={logo}
             alt="Logo"
-            className="w-44 md:w-36 cursor-pointer"
+            className="w-32 md:w-36 cursor-pointer"
             onClick={() => scrollToSection("top")}
           />
         </div>
