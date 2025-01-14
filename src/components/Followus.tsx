@@ -1,4 +1,8 @@
 import React from "react";
+import follow1 from "../assets/IMG_7756.webp"
+import follow2 from "../assets/IMG-20250113-WA0047.webp"
+import follow3 from "../assets/DB2A5526.webp"
+import follow4 from "../assets/IMG-20250113-WA0030.webp"
 
 const FollowUsSection: React.FC = () => {
   return (
@@ -14,26 +18,26 @@ const FollowUsSection: React.FC = () => {
       {/* Image Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-8 max-w-6xl mx-auto">
         <img
-          src="https://images.squarespace-cdn.com/content/v1/585ac0bb414fb5eed215d4e3/1722640258496-6SH1NCY7YC0P29EELFBP/image-asset.jpeg?format=300w"
+          src={follow1}
           alt="Event 1"
-          className="w-full h-auto rounded-lg object-cover"
+          className="w-full h-[300px] md:h-[400px] rounded-lg object-fill"
         />
         
         <img
-          src="https://images.squarespace-cdn.com/content/v1/585ac0bb414fb5eed215d4e3/1721775783789-JVYCZIP5ITATLITU99B3/image-asset.jpeg?format=300w"
+          src={follow2}
           alt="Event 3"
-          className="w-full h-auto rounded-lg object-cover"
+          className="w-full h-[300px] md:h-[400px] rounded-lg object-fill"
         />
         <img
-          src="https://images.squarespace-cdn.com/content/v1/585ac0bb414fb5eed215d4e3/1721394966249-NS81SL3AVW7A09UOM1IL/image-asset.jpeg?format=300w"
+          src={follow4}
           alt="Event 4"
-          className="w-full h-auto rounded-lg object-cover"
+          className="w-full h-[300px] md:h-[400px] rounded-lg object-fill"
         />
       
         <img
-          src="https://images.squarespace-cdn.com/content/v1/585ac0bb414fb5eed215d4e3/1720652662498-WB533A8F3V22H6D1XFGP/image-asset.jpeg?format=300w"
+          src={follow3}
           alt="Event 6"
-          className="w-full h-auto rounded-lg object-cover"
+          className="w-full h-[300px] md:h-[400px] rounded-lg object-fill"
         />
       </div>
     </div>

@@ -9,15 +9,15 @@ import partyImage3 from "../assets/Hero/parties3.webp"; // Replace with actual i
 const CorporateFestivities: React.FC = () => {
   const subsections = [
     {
-      title: "Office Decor",
+      title: "Office Décor – Transform Your Workspace into a Festive Wonderland",
       description:
-        "Transform your workplace into a festive haven with our expert office décor services. From vibrant themes to intricate details, we create a captivating ambiance for every occasion.",
+        "Looking to brighten up your office with festive vibes, Our expert décor team can transform your workspace into a stunning, joyful environment—be it for the holiday season, annual celebrations, or themed occasions. From elegant designs to bold, colorful setups, we’ll make your office come alive with the festive spirit.",
       images: [decorImage1, decorImage2,decorImage3],
     },
     {
-      title: "Parties",
+      title: "Parties – Celebrate Success, Big or Small",
       description:
-        "Celebrate your milestones and festive occasions with unforgettable corporate parties. We handle everything from theme creation to flawless execution, ensuring a lively and enjoyable experience.",
+        "Whether it’s a year-end bash, a milestone celebration, or a festival party, we know how to throw an event your team will rave about. From venue selection and décor to entertainment and catering, we handle everything so you can focus on enjoying the moment. Let’s make your next party an unforgettable experience!",
       images: [partyImage1, partyImage2, partyImage3],
     },
   ];

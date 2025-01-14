@@ -13,19 +13,19 @@ const CorporateTravels: React.FC = () => {
     {
       title: "MICE (Meetings, Incentives, Conferences, Exhibitions)",
       description:
-        "Organize world-class MICE events that are tailored to your company's needs. From venue selection to event management, we've got you covered.",
+        "Make your next business gathering a resounding success. From high-level meetings and rewarding incentive trips to large-scale conferences and exhibitions, we handle all the logistics to ensure your event is productive, enjoyable, and perfectly executed.",
       images: [miceImage1, miceImage2,miceImage3],
     },
     {
-      title: "Offsites",
+      title: "Offsites – Work Hard, Play Harder",
       description:
-        "Plan team-building retreats and offsite activities to foster collaboration and boost morale. We make your offsites unforgettable.",
+        "Want to strengthen team spirit while working in a refreshing new environment? Our expertly curated offsites blend professional development with relaxation and team bonding, helping your employees recharge and collaborate in inspiring destinations.",
       images: [offsiteImage1, offsiteImage2,offsiteImage3],
     },
     {
-      title: "Domestic Travel Packages",
+      title: "Domestic Travel Packages – Discover New Horizons",
       description:
-        "Explore exciting destinations within the country. We provide customized travel packages to suit your corporate needs.",
+        "Planning a business trip within the country? Our custom domestic travel packages cover everything from transportation and accommodation to curated itineraries ensuring a smooth and delightful travel experience for your team.",
       images: [domesticImage1, domesticImage2],
     },
     // Add more subsections here if needed

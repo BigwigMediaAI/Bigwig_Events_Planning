@@ -3,41 +3,40 @@ import rnrImage1 from "../assets/Hero/RR2.webp";
 import rnrImage2 from "../assets/Hero/RR.webp";
 import rnrImage3 from "../assets/Hero/awards2.webp";
 import awardsImage1 from "../assets/Hero/awards.webp";
+import awardsImage2 from "../assets/Hero/awards.webp";
 import awardsImage3 from "../assets/Hero/RR4.webp";
 import productLaunchImage1 from "../assets/Hero/productlaunch.webp";
 import productLaunchImage2 from "../assets/Hero/productlaunch2.webp";
 import productLaunchImage3 from "../assets/Hero/productlaunch3.webp";
-import productLaunchImage4 from "../assets/Hero/productlaunch4.webp";
 import townhallsImage1 from "../assets/background.webp";
 import townhallsImage2 from "../assets/Hero/town1.webp";
 import townhallsImage3 from "../assets/Hero/town2.webp";
-import townhallsImage4 from "../assets/Hero/town3.webp";
 
 const CorporateEvents: React.FC = () => {
   const subsections = [
     {
-      title: "🎉 Rewards & Recognition (R&R)",
+      title: "🎉 Rewards & Recognition (R&R) – Celebrate Success, Inspire Greatness",
       description:
-        "Celebrate the achievements of your team with exciting R&R events. Create unforgettable moments of recognition and reward.",
+        "Your team works hard—why not celebrate their achievements in style We specialize in creating Rewards & Recognition events that leave employees feeling valued and motivated. From creative award themes to personalized experiences, we’ll help you reward success in the most unforgettable way.",
       images: [rnrImage1, rnrImage2, rnrImage3],
     },
     {
-      title: "🏆 Awards",
+      title: "🏆 Awards – Honoring Excellence with Elegance",
       description:
-        "Host glamorous award ceremonies to honor excellence. From stunning stages to engaging themes, we bring your vision to life.",
-      images: [awardsImage1,awardsImage3],
+        "Host an awards ceremony that your employees and guests will talk about long after the event is over. We’ll design a glamorous, well-organized event with everything from stunning décor to custom trophies, making every winner feel like a star.",
+      images: [awardsImage1,awardsImage2,awardsImage3],
     },
     {
-      title: "🚀 Product Launch",
+      title: "🚀 Product Launch – Unveil Your Innovation with a Bang",
       description:
-        "Unveil your latest innovations with style. Our team ensures a flawless launch event that leaves a lasting impression.",
-      images: [productLaunchImage1,productLaunchImage2,productLaunchImage3,productLaunchImage4],
+        "Launching a new product? Let’s turn your launch into a show-stopping event! With immersive presentations, dazzling visuals, and seamless execution, we’ll help you make a powerful first impression on your audience and the market.",
+      images: [productLaunchImage1,productLaunchImage2,productLaunchImage3],
     },
     {
-      title: "📢 Townhalls",
+      title: "📢 Townhalls – Communicate, Collaborate, Connect",
       description:
-        "Engage and connect with your team in impactful townhalls. From professional setups to seamless execution, we handle it all.",
-      images: [townhallsImage1, townhallsImage2, townhallsImage3,townhallsImage4],
+        "Townhalls are more than just meetings—they’re an opportunity to bring your entire organization together. We’ll help you create a townhall event that’s interactive, engaging, and professionally managed, ensuring your message is delivered with impact",
+      images: [townhallsImage1, townhallsImage2, townhallsImage3],
     },
   ];
 

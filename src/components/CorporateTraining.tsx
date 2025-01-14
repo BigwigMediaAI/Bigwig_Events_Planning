@@ -6,9 +6,9 @@ import teamBuildingImage3 from "../assets/Hero/TEAM3.webp"; // Replace with actu
 const CorporateTraining: React.FC = () => {
   const subsections = [
     {
-      title: "Team Building",
+      title: "Team Building – Strengthen Bonds, Build Trust",
       description:
-        "Strengthen team spirit and collaboration through our dynamic team-building programs. From fun challenges to strategic activities, we create memorable and effective experiences.",
+        "A strong team is the foundation of every successful organization. Our team-building programs are designed to break barriers, improve collaboration, and create a sense of unity. With fun, interactive activities and real-world scenarios, your team will leave feeling energized, motivated, and more connected than ever.",
       images: [teamBuildingImage1, teamBuildingImage2,teamBuildingImage3],
     },
   ];

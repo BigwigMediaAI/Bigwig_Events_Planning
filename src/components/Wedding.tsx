@@ -1,7 +1,7 @@
-import img1 from "../assets/DB2A5526.webp";
-import img2 from "../assets/DB2A5526.webp";
-import img3 from "../assets/DB2A5526.webp";
-import img4 from "../assets/DB2A5526.webp";
+import img1 from "../assets/Hero/town3.webp";
+import img2 from "../assets/Hero/weeding.webp";
+import img3 from "../assets/Hero/weeding4.webp";
+import img4 from "../assets/Hero/weeding2.webp";
 
 const WeddingSection = () => {
   return (
