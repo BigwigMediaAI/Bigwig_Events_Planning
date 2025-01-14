@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import img1 from "../assets/DB2A5526.webp"
 import img2 from "../assets/DB2A5541.webp"
 import img3 from "../assets/DSC_0074.webp"
@@ -265,6 +265,13 @@ const BigFolio: React.FC = () => {
       );
     };
 
+    useEffect(() => {
+      const interval = setInterval(nextImage, 3000); // Change image every 3 seconds
+  
+      // Clean up the interval when the component is unmounted or user interacts
+      return () => clearInterval(interval);
+    }, []);
+
     
   return (
     <div id="bigfolio" className=" mt-10">
@@ -316,7 +323,7 @@ const BigFolio: React.FC = () => {
   </div>
 
   {/* Dots Navigation */}
-  <div className="flex justify-center mt-4 space-x-2">
+  <div className="hidden md:flex justify-center mt-4 space-x-2">
     {images.map((_, index) => (
       <button
         key={index}
