@@ -10,7 +10,6 @@ import CorporateTravels from "../components/CorporateTravels"
 import CorporateTraining from "../components/CorporateTraining"
 import CorporateFestivities from "../components/CorporateFestivities"
 import WeddingSection from "../components/Wedding"
-import AwardsSection from "../components/Awards"
 
 function Landing() {
   const [isVisible, setIsVisible] = useState(false);
@@ -48,7 +47,6 @@ function Landing() {
    <CorporateActivationsATLBTL/>
    <BigFolio/>
    <WeddingSection/>
-   <AwardsSection/>
     <FollowUsSection/>
     
    <Footer/>

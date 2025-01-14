@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
     BigEvents: ["Big", "Events"],
     BigFolio: ["Big", "Folio"],
     BigWeddings: ["Big", "Weddings"],
-    BigAwards: ["Big", "Awards"],
+    BigClients: ["Big", "Clients"],
     ContactUs: ["Contact", "Us"],
   };
 
@@ -73,8 +73,8 @@ const HeroSection: React.FC = () => {
             "AboutUs",
             "BigEvents",
             "BigFolio",
+            "BigClients",
             "BigWeddings",
-            "BigAwards",
             "ContactUs",
           ].map((item) => (
             <div
@@ -157,8 +157,8 @@ const HeroSection: React.FC = () => {
             "AboutUs",
             "BigEvents",
             "BigFolio",
+            "BigClients",
             "BigWeddings",
-            "BigAwards",
             "ContactUs",
           ].map((item) => (
             <a
