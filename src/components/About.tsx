@@ -1,51 +1,31 @@
+import React from 'react';
 
-const AboutSection = () => {
+const About: React.FC = () => {
   return (
-    <div id="aboutus" className="relative bg-black text-white">
-      {/* Top Triangle (Pointing Down) */}
-      <div
-        className="absolute top-0 left-0 w-full bg-black"
-        style={{
-          clipPath: "polygon(50% 100%, 0% 0%, 100% 0%)",
-          height: "12rem", // Adjust the height as needed
-        }}
-      ></div>
+    <div>
+        <section id="aboutus" className="py-12 bg-gray-50">
+  <div className="container mx-auto px-4 md:px-16 text-center">
+    <h2 className="text-4xl font-bold text-gray-800 mb-6">About Us</h2>
+    <p className="text-lg text-gray-700 mb-8 text-justify md:text-center">
+      At Bigwig Events, we believe that every event deserves to be extraordinary. 
+      With a passion for creating unforgettable moments, we specialize in delivering tailor-made event planning services 
+      designed to meet the unique needs and visions of our clients. From weddings and corporate events to milestone celebrations, 
+      we bring creativity, precision, and unparalleled attention to detail to every occasion.
+    </p>
+    <p className="text-lg text-gray-700 mb-8 text-justify md:text-center">
+      With offices in Boston and New York City, our experienced team proudly serves local clients throughout 
+      New England and the Tri-State area, while also offering destination event services worldwide. Over the years, 
+      we’ve transformed venues across the globe, from the sandy beaches of the Bahamas to the historic charm of Italy and Ireland.
+    </p>
+    <p className="text-lg text-gray-700 text-justify md:text-center">
+      At Bigwig Events, we take on a limited number of events each year to ensure a high-touch, personalized planning experience 
+      for every client. Your vision is our mission, and we’re here to make your dream event a stunning reality.
+    </p>
+  </div>
+</section>
 
-      {/* Content Section */}
-      <div className="relative z-10 pt-20 pb-32 px-6 md:px-12 lg:px-24 max-w-4xl mx-auto text-center">
-        {/* Logo/Icon */}
-        <div className="mb-6 flex justify-center items-center">
-          <div className="relative bg-teal-500 w-12 h-12 rounded-full flex justify-center items-center">
-            <div className="absolute w-6 h-6 bg-yellow-400 rounded-full"></div>
-          </div>
-        </div>
-
-        {/* Title */}
-        <h1 className="text-4xl font-bold md:mb-20">
-          BIG<span className="text-yellow-400">WIG</span>
-        </h1>
-
-        {/* Description */}
-        <p className="text-gray-400 leading-relaxed">
-          <span className='font-semibold'>At BIGWIG</span>, we specialize in crafting exceptional experiences
-            tailored for your corporate needs. From stunning events to
-            impactful training, creative activations to seamless travels, we
-            ensure every detail is perfectly executed. Elevate your brand,
-            engage your teams, and celebrate success with our bespoke services
-            designed to make a lasting impression.
-        </p>
-      </div>
-
-      {/* Bottom Triangle (Pointing Up) */}
-      <div
-        className="absolute bottom-0 left-0 w-full bg-gray-900"
-        style={{
-          clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)",
-          height: "26rem",
-        }}
-      ></div>
     </div>
   );
 };
 
-export default AboutSection;
+export default About;
