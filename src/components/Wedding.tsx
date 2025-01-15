@@ -64,7 +64,7 @@ const WeddingSection = () => {
   <p className="text-justify md:text-left text-gray-600 mb-3">
     Our personalized approach means we listen to your unique vision and turn it into a beautifully orchestrated experience. With our expertise in handling everything from floral arrangements to entertainment, catering, and guest management, you can be assured that your wedding will be a seamless blend of elegance and joy.
   </p>
-  <ul className="text-justify md:text-left list-disc list-inside text-gray-600 mb-6">
+  <ul className="text-justify md:text-left list-disc list-inside text-gray-600 mb-3">
     <li>Stunning venues handpicked to match your vision and style</li>
     <li>Flawless execution of every detail, ensuring a smooth flow of events</li>
     <li>Personalized themes and decor tailored to your preferences</li>
