@@ -9,7 +9,7 @@ const FollowUsSection: React.FC = () => {
     <div className=" py-4">
       {/* Heading Section */}
       <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
           Follow us to see behind the scenes:
         </h2>
         <p className="text-lg text-gray-600 mt-2">@BIGWIGEVENTS</p>
@@ -20,24 +20,24 @@ const FollowUsSection: React.FC = () => {
         <img
           src={follow1}
           alt="Event 1"
-          className="w-full h-[300px] md:h-[400px] rounded-lg object-fill"
+          className="w-full h-[250px] md:h-[400px] rounded-lg object-fill"
         />
         
         <img
           src={follow2}
           alt="Event 3"
-          className="w-full h-[300px] md:h-[400px] rounded-lg object-fill"
+          className="w-full h-[250px] md:h-[400px] rounded-lg object-fill"
         />
         <img
           src={follow4}
           alt="Event 4"
-          className="w-full h-[300px] md:h-[400px] rounded-lg object-fill"
+          className="w-full h-[250px] md:h-[400px] rounded-lg object-fill"
         />
       
         <img
           src={follow3}
           alt="Event 6"
-          className="w-full h-[300px] md:h-[400px] rounded-lg object-fill"
+          className="w-full h-[250px] md:h-[400px] rounded-lg object-fill"
         />
       </div>
     </div>

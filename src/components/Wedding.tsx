@@ -58,13 +58,13 @@ const WeddingSection = () => {
             <h2 className="text-3xl font-semibold text-gray-700 mb-4">
               Your Perfect Day, Tailored to You
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-justify md:text-left text-gray-600 mb-6">
               At our wedding planning services, we bring your dream wedding to
               life. Whether it's a grand celebration or an intimate gathering,
               we take care of every detail—from selecting the perfect venue to
               designing exquisite decor and managing all arrangements.
             </p>
-            <ul className="list-disc list-inside text-gray-600 mb-6">
+            <ul className="text-justify md:text-left list-disc list-inside text-gray-600 mb-6">
               <li>Stunning venues to match your vision</li>
               <li>Flawless execution of every detail</li>
               <li>Personalized themes and decor</li>
