@@ -88,7 +88,7 @@ const Footer = () => {
   Cape Cod, Nantucket, The Hamptons, and destinations worldwide.
 </p>
 <p className="text-sm mt-4">
-  Let us handle every detail for an unforgettable celebration.
+  Email: <a href="mailto:info@bigwigmedia.in" className="text-blue-400">info@bigwigmedia.in</a>
 </p>
 
   {/* Social Media Icons */}
