@@ -54,20 +54,21 @@ const Footer = () => {
             </li>
             <li>
               <a
+                onClick={() => scrollToSection("bigclients")}
+                className="hover:underline cursor-pointer"
+              >
+                Big<span className="text-yellow-500">Clients</span>
+              </a>
+            </li>
+            <li>
+              <a
                 onClick={() => scrollToSection("bigweddings")}
                 className="hover:underline cursor-pointer"
               >
                 Big<span className="text-yellow-500">Weddings</span>
               </a>
             </li>
-            <li>
-              <a
-                onClick={() => scrollToSection("bigawards")}
-                className="hover:underline cursor-pointer"
-              >
-                Big<span className="text-yellow-500">Awards</span>
-              </a>
-            </li>
+            
             <li>
               <a
                 onClick={() => scrollToSection("contactus")}
