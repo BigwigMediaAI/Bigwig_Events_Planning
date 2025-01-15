@@ -23,28 +23,28 @@ const WeddingSection = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Section - Images */}
           <div className="grid grid-cols-2 gap-4">
-            <div className="rounded-lg overflow-hidden shadow-lg h-40">
+            <div className="rounded-lg overflow-hidden shadow-lg h-60">
               <img
                 src={img1}
                 alt="Wedding Venue"
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="rounded-lg overflow-hidden shadow-lg h-40">
+            <div className="rounded-lg overflow-hidden shadow-lg h-60">
               <img
                 src={img2}
                 alt="Wedding Decor"
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="rounded-lg overflow-hidden shadow-lg h-40">
+            <div className="rounded-lg overflow-hidden shadow-lg h-60">
               <img
                 src={img3}
                 alt="Couple Dancing"
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="rounded-lg overflow-hidden shadow-lg h-40">
+            <div className="rounded-lg overflow-hidden shadow-lg h-60">
               <img
                 src={img4}
                 alt="Wedding Cake"
@@ -55,22 +55,25 @@ const WeddingSection = () => {
 
           {/* Right Section - Content */}
           <div className="text-center md:text-left flex flex-col justify-center">
-            <h2 className="text-3xl font-semibold text-gray-700 mb-4">
-              Your Perfect Day, Tailored to You
-            </h2>
-            <p className="text-justify md:text-left text-gray-600 mb-6">
-              At our wedding planning services, we bring your dream wedding to
-              life. Whether it's a grand celebration or an intimate gathering,
-              we take care of every detail—from selecting the perfect venue to
-              designing exquisite decor and managing all arrangements.
-            </p>
-            <ul className="text-justify md:text-left list-disc list-inside text-gray-600 mb-6">
-              <li>Stunning venues to match your vision</li>
-              <li>Flawless execution of every detail</li>
-              <li>Personalized themes and decor</li>
-              <li>Expert coordination for a stress-free day</li>
-            </ul>
-          </div>
+  <h2 className="text-3xl font-semibold text-gray-700 mb-4">
+    Your Perfect Day, Tailored to You
+  </h2>
+  <p className="text-justify md:text-left text-gray-600 mb-3">
+    At our wedding planning services, we specialize in transforming your dreams into reality. Whether it's a grand celebration or an intimate gathering, we ensure that every detail is carefully handled—from selecting the perfect venue to designing exquisite decor and managing all aspects of the event. Our team of seasoned professionals takes pride in creating unforgettable memories, leaving you free to enjoy your special day without any stress or worries.
+  </p>
+  <p className="text-justify md:text-left text-gray-600 mb-3">
+    Our personalized approach means we listen to your unique vision and turn it into a beautifully orchestrated experience. With our expertise in handling everything from floral arrangements to entertainment, catering, and guest management, you can be assured that your wedding will be a seamless blend of elegance and joy.
+  </p>
+  <ul className="text-justify md:text-left list-disc list-inside text-gray-600 mb-6">
+    <li>Stunning venues handpicked to match your vision and style</li>
+    <li>Flawless execution of every detail, ensuring a smooth flow of events</li>
+    <li>Personalized themes and decor tailored to your preferences</li>
+    <li>Expert coordination by dedicated professionals for a stress-free experience</li>
+    <li>High-quality catering with menus curated to delight your guests</li>
+    <li>Entertainment options designed to enhance the joy of your special day</li>
+  </ul>
+</div>
+
         </div>
       </div>
     </div>
