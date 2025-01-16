@@ -20,24 +20,24 @@ const FollowUsSection: React.FC = () => {
         <img
           src={follow1}
           alt="Event 1"
-          className="w-full h-[250px] md:h-[400px] rounded-lg object-fill"
+          className="w-full h-[200px] md:h-[350px] rounded-lg object-fill"
         />
         
         <img
           src={follow2}
           alt="Event 3"
-          className="w-full h-[250px] md:h-[400px] rounded-lg object-fill"
+          className="w-full h-[200px] md:h-[350px] rounded-lg object-fill"
         />
         <img
           src={follow4}
           alt="Event 4"
-          className="w-full h-[250px] md:h-[400px] rounded-lg object-fill"
+          className="w-full h-[200px] md:h-[350px] rounded-lg object-fill"
         />
       
         <img
           src={follow3}
           alt="Event 6"
-          className="w-full h-[250px] md:h-[400px] rounded-lg object-fill"
+          className="w-full h-[200px] md:h-[350px] rounded-lg object-fill"
         />
       </div>
     </div>
