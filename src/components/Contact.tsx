@@ -10,7 +10,6 @@ const ContactForm: React.FC = () => {
       </h2>
       <div className="grid md:grid-cols-2 gap-10 mt-20">
         {/* Left Content - Contact Details */}
-        {/* Left Content - Contact Details */}
         <div className="space-y-6 text-sm text-center md:text-left">
           <div>
             <h3 className="font-semibold text-base mb-2 text-gray-700">
@@ -43,7 +42,23 @@ const ContactForm: React.FC = () => {
             <h3 className="font-semibold text-base mb-2 text-gray-700">
               Phone
             </h3>
-            <p className="text-gray-600">(855) 979-7887</p>
+            <p className="text-gray-600">+918800818156</p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-base mb-2 text-gray-700">
+              WhatsApp
+            </h3>
+            <p>
+              <a
+                href="https://wa.me/+918800818156" // ← Replace with your actual WhatsApp number
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-600 underline"
+              >
+                +918800818156
+              </a>
+            </p>
           </div>
         </div>
 
