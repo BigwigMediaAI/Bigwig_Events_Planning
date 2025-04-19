@@ -5,12 +5,16 @@ import award4 from "../assets/DSC_0170.webp";
 
 const AwardsSection = () => {
   return (
-    <div id="bigawards" className="bg-gray-50 text-gray-800 py-16 px-6 md:px-12 lg:px-24">
+    <div
+      id="bigawards"
+      className="bg-gray-50 text-gray-800 py-16 px-6 md:px-12 lg:px-24"
+    >
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-800">Our Achievements</h1>
         <p className="mt-4 text-lg text-gray-600">
-          We are proud to be recognized for our exceptional service and commitment to excellence.
+          We are proud to be recognized for our exceptional service and
+          commitment to excellence.
         </p>
       </div>
 
