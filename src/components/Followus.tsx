@@ -9,7 +9,7 @@ const FollowUsSection: React.FC = () => {
     <div className="md:w-11/12 mx-auto py-4 mb-10">
       {/* Heading Section */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-white">
+        <h2 className="text-3xl md:text-4xl font-semibold text-white">
           Follow us to see behind the scenes:
         </h2>
         <p className="text-lg text-gray-300 mt-2">@BIGWIGEVENTS</p>

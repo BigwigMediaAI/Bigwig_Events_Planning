@@ -57,7 +57,7 @@ const CorporateEvents: React.FC = () => {
     <div id="bigevents" className=" py-8 px-4 md:px-10 mb-10">
       <h1
         id="event1"
-        className="text-4xl font-bold text-center text-white mb-2"
+        className="text-4xl font-semibold text-center text-white mb-2"
       >
         Corporate Events
       </h1>

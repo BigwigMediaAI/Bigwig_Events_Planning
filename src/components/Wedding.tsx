@@ -10,7 +10,7 @@ const WeddingSection = () => {
       <div className="relative md:w-11/12 mx-auto z-10 px-5 py-12">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-white">
+          <h1 className="text-4xl font-semibold text-white">
             Make Your Dream Wedding a Reality
           </h1>
           <p className="mt-4 text-lg text-gray-300">

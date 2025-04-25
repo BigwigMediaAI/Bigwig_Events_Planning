@@ -148,7 +148,7 @@ const Clients: React.FC = () => {
 
   return (
     <div id="bigclients" className="w-11/12 mx-auto  mt-16 mb-12">
-      <h1 className="text-4xl text-center mb-12 font-bold text-white">
+      <h1 className="text-4xl text-center mb-12 font-semibold text-white">
         Our Clients
       </h1>
       <Slider {...settings}>

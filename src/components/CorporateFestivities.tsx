@@ -37,7 +37,7 @@ const CorporateFestivities: React.FC = () => {
 
   return (
     <div id="event5" className=" py-8 px-4 md:px-10 mb-10">
-      <h1 className="text-4xl font-bold text-center text-white mb-2">
+      <h1 className="text-4xl font-semibold text-center text-white mb-2">
         Corporate Festivities
       </h1>
       <p className="text-center text-gray-300 mb-12">

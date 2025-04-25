@@ -5,7 +5,7 @@ import React from "react";
 const ContactForm: React.FC = () => {
   return (
     <div id="contactus" className="container mx-auto px-4 py-10 max-w-4xl ">
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center">
+      <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 text-center">
         Contact Us
       </h2>
       <div className="grid md:grid-cols-2 gap-10 mt-20">

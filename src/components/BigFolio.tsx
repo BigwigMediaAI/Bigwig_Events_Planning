@@ -270,7 +270,7 @@ const BigFolio: React.FC = () => {
 
   return (
     <div id="bigfolio" className=" mt-10">
-      <h1 className="text-4xl font-bold text-center text-white mb-8">
+      <h1 className="text-4xl font-semibold text-center text-white mb-8">
         Gallery View
       </h1>
 
