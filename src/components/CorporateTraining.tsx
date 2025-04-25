@@ -9,7 +9,7 @@ const CorporateTraining: React.FC = () => {
       title: "Team Building – Strengthen Bonds, Build Trust",
       description:
         "A strong team is the foundation of every successful organization. Our team-building programs are designed to break barriers, improve collaboration, and create a sense of unity. With fun, interactive activities and real-world scenarios, your team will leave feeling energized, motivated, and more connected than ever.",
-      images: [teamBuildingImage1, teamBuildingImage2,teamBuildingImage3],
+      images: [teamBuildingImage1, teamBuildingImage2, teamBuildingImage3],
     },
   ];
 
@@ -17,19 +17,22 @@ const CorporateTraining: React.FC = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % subsections[0].images.length); // Loop through images
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % subsections[0].images.length
+      ); // Loop through images
     }, 3000); // Change every 3 seconds
 
     return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
 
   return (
-    <div id="event4" className="bg-gray-100 py-8 px-4">
+    <div id="event4" className=" py-8 px-4">
       <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
         Corporate Training
       </h1>
       <p className="text-center text-gray-600 mb-12">
-        Empower your workforce with training and team-building activities that inspire and deliver results.
+        Empower your workforce with training and team-building activities that
+        inspire and deliver results.
       </p>
       <div className="space-y-12 max-w-6xl mx-auto">
         {subsections.map((section, index) => (

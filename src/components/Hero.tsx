@@ -31,11 +31,12 @@ const HeroSection: React.FC = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const yOffset = -80; // Adjust based on your navbar height
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      const yOffset = -80;
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
-    setMenuOpen(false); // Close menu after navigation in mobile view
+    setMenuOpen(false);
   };
 
   useEffect(() => {
@@ -49,103 +50,88 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <div id="home"
-      className="bg-black bg-opacity-50 relative h-screen bg-cover bg-center"
+    <div
+      id="home"
+      className="relative h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${bg})` }}
     >
+      {/* Overlay for dark tint */}
+      <div className="absolute inset-0 bg-black bg-opacity-60 z-0" />
+
       {/* Navbar */}
       <nav
-        className={`fixed w-full px-8 py-2 text-white flex justify-between items-center z-40 transition-all duration-300 ${
+        className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
           isScrolled ? "bg-black bg-opacity-65" : ""
         }`}
       >
-        <div>
-          <img
-            src={logo}
-            alt="Logo"
-            className="w-32 md:w-36 cursor-pointer"
-            onClick={() => scrollToSection("top")}
-          />
-        </div>
-        <div className="hidden md:flex space-x-8 text-lg font-semibold relative">
-          {[
-            "Home",
-            "AboutUs",
-            "BigEvents",
-            "BigFolio",
-            "BigClients",
-            "BigWeddings",
-            "ContactUs",
-          ].map((item) => (
-            <div
-              key={item}
-              className="relative"
-              onMouseEnter={() => item === "BigEvents" && setBigEventsOpen(true)}
-              onMouseLeave={() => item === "BigEvents" && setBigEventsOpen(false)}
-            >
-              <a
-                onClick={() => scrollToSection(item.toLowerCase())}
-                className="cursor-pointer hover:text-yellow-400 transition-colors duration-300"
+        <div className="w-5/6 mx-auto px-4 md:px-8 py-2 flex justify-between items-center">
+          <div>
+            <img
+              src={logo}
+              alt="Logo"
+              className="w-full max-w-[140px] cursor-pointer"
+              onClick={() => scrollToSection("top")}
+            />
+          </div>
+          <div className="hidden md:flex space-x-8 text-lg font-semibold relative text-white">
+            {[
+              "Home",
+              "AboutUs",
+              "BigEvents",
+              "BigFolio",
+              "BigClients",
+              "BigWeddings",
+              "ContactUs",
+            ].map((item) => (
+              <div
+                key={item}
+                className="relative"
+                onMouseEnter={() =>
+                  item === "BigEvents" && setBigEventsOpen(true)
+                }
+                onMouseLeave={() =>
+                  item === "BigEvents" && setBigEventsOpen(false)
+                }
               >
-                {splitText(item)}
-              </a>
-              {item === "BigEvents" && bigEventsOpen && (
-                <div className="absolute top-7 left-0 bg-black bg-opacity-60 text-white p-4 shadow-lg w-60 rounded">
-                  <ul className="space-y-2">
-                    <li>
-                      <a
-                        onClick={() => scrollToSection("event1")}
-                        className="block hover:text-yellow-400 transition-colors cursor-pointer"
-                      >
-                        Corporate Events
-                      </a>
-                    </li>
-                    <li>
-        <a
-          onClick={() => scrollToSection("event2")}
-          className="block hover:text-yellow-400 transition-colors cursor-pointer"
-        >
-          Corporate Activations
-        </a>
-      </li>
-      <li>
-        <a
-          onClick={() => scrollToSection("event3")}
-          className="block hover:text-yellow-400 transition-colors cursor-pointer"
-        >
-          Corporate Travels
-        </a>
-      </li>
-      <li>
-        <a
-          onClick={() => scrollToSection("event4")}
-          className="block hover:text-yellow-400 transition-colors cursor-pointer"
-        >
-          Corporate Training
-        </a>
-      </li>
-      <li>
-        <a
-          onClick={() => scrollToSection("event5")}
-          className="block hover:text-yellow-400 transition-colors cursor-pointer"
-        >
-          Corporate Festivities
-        </a>
-      </li>
-                  </ul>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-        {/* Hamburger Menu for Mobile */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="text-yellow-400 text-3xl focus:outline-none"
-          >
-            ☰
-          </button>
+                <a
+                  onClick={() => scrollToSection(item.toLowerCase())}
+                  className="cursor-pointer hover:text-yellow-400 transition-colors duration-300"
+                >
+                  {splitText(item)}
+                </a>
+                {item === "BigEvents" && bigEventsOpen && (
+                  <div className="absolute top-7 left-0 bg-black bg-opacity-70 text-white p-4 shadow-lg w-60 rounded">
+                    <ul className="space-y-2">
+                      {[
+                        ["Corporate Events", "event1"],
+                        ["Corporate Activations", "event2"],
+                        ["Corporate Travels", "event3"],
+                        ["Corporate Training", "event4"],
+                        ["Corporate Festivities", "event5"],
+                      ].map(([label, id]) => (
+                        <li key={id}>
+                          <a
+                            onClick={() => scrollToSection(id)}
+                            className="block hover:text-yellow-400 transition-colors cursor-pointer"
+                          >
+                            {label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="md:hidden">
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-yellow-400 text-3xl focus:outline-none"
+            >
+              ☰
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -175,21 +161,24 @@ const HeroSection: React.FC = () => {
       {/* Hero Content */}
       <div
         id="top"
-        className="absolute inset-0 flex flex-col justify-center items-center text-center text-gray-300 px-4 z-0 bg-black bg-opacity-50"
+        className="absolute inset-0 flex flex-col justify-center items-center text-center text-gray-300 px-4 z-10"
       >
-        <h1 className="text-3xl md:text-5xl font-bold">
-          <Typewriter
-            options={{
-              strings: ["Big Moments, Big Memories - Crafted Just for You"],
-              autoStart: true,
-              loop: true,
-              deleteSpeed: 50,
-            }}
-          />
-        </h1>
-        <p className="text-lg md:text-xl mt-4">
-          From grand weddings to awe-inspiring events, we bring your vision to life.
-        </p>
+        <div className="w-5/6 mx-auto">
+          <h1 className="text-3xl md:text-5xl font-bold">
+            <Typewriter
+              options={{
+                strings: ["Big Moments, Big Memories - Crafted Just for You"],
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 50,
+              }}
+            />
+          </h1>
+          <p className="text-lg md:text-xl mt-4">
+            From grand weddings to awe-inspiring events, we bring your vision to
+            life.
+          </p>
+        </div>
       </div>
     </div>
   );

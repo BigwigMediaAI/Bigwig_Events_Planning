@@ -15,7 +15,8 @@ import townhallsImage3 from "../assets/Hero/town2.webp";
 const CorporateEvents: React.FC = () => {
   const subsections = [
     {
-      title: "🎉 Rewards & Recognition (R&R) – Celebrate Success, Inspire Greatness",
+      title:
+        "🎉 Rewards & Recognition (R&R) – Celebrate Success, Inspire Greatness",
       description:
         "Your team works hard—why not celebrate their achievements in style We specialize in creating Rewards & Recognition events that leave employees feeling valued and motivated. From creative award themes to personalized experiences, we’ll help you reward success in the most unforgettable way.",
       images: [rnrImage1, rnrImage2, rnrImage3],
@@ -24,13 +25,13 @@ const CorporateEvents: React.FC = () => {
       title: "🏆 Awards – Honoring Excellence with Elegance",
       description:
         "Host an awards ceremony that your employees and guests will talk about long after the event is over. We’ll design a glamorous, well-organized event with everything from stunning décor to custom trophies, making every winner feel like a star.",
-      images: [awardsImage1,awardsImage2,awardsImage3],
+      images: [awardsImage1, awardsImage2, awardsImage3],
     },
     {
       title: "🚀 Product Launch – Unveil Your Innovation with a Bang",
       description:
         "Launching a new product? Let’s turn your launch into a show-stopping event! With immersive presentations, dazzling visuals, and seamless execution, we’ll help you make a powerful first impression on your audience and the market.",
-      images: [productLaunchImage1,productLaunchImage2,productLaunchImage3],
+      images: [productLaunchImage1, productLaunchImage2, productLaunchImage3],
     },
     {
       title: "📢 Townhalls – Communicate, Collaborate, Connect",
@@ -44,19 +45,25 @@ const CorporateEvents: React.FC = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % subsections[0].images.length); // Loop through images
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % subsections[0].images.length
+      ); // Loop through images
     }, 3000); // Change every 3 seconds
 
     return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
 
   return (
-    <div id="bigevents" className="bg-gray-100 py-8 px-4">
-      <h1 id="event1" className="text-4xl font-bold text-center text-gray-800 mb-8">
+    <div id="bigevents" className=" py-8 px-4">
+      <h1
+        id="event1"
+        className="text-4xl font-bold text-center text-gray-800 mb-8"
+      >
         Corporate Events
       </h1>
       <p className="text-center text-gray-600 mb-12">
-        From rewards and recognition to product launches, we deliver exceptional corporate events tailored to your needs.
+        From rewards and recognition to product launches, we deliver exceptional
+        corporate events tailored to your needs.
       </p>
       <div className="space-y-12 max-w-6xl mx-auto">
         {subsections.map((section, index) => (
@@ -71,7 +78,6 @@ const CorporateEvents: React.FC = () => {
                 {section.title}
               </h2>
               <p className="text-gray-600 mb-6">{section.description}</p>
-              
             </div>
             <div className="md:w-1/2 p-4 relative">
               {/* Single image displayed with smooth transitions */}

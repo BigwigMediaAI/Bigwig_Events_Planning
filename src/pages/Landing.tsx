@@ -38,8 +38,7 @@ function Landing() {
   };
 
   return (
-    <>
-      {/* <NavBar/> */}
+    <div className="bg-black">
       <HeroSection />
       <About />
       <CorporateEvents />
@@ -54,6 +53,7 @@ function Landing() {
       <ContactForm />
 
       <Footer />
+
       {/* Scroll Top Button - Conditionally Visible */}
       <div className="fixed bottom-10 right-2 flex flex-col items-center space-y-4 z-50">
         {isVisible && (
@@ -66,7 +66,7 @@ function Landing() {
           </button>
         )}
       </div>
-    </>
+    </div>
   );
 }
 

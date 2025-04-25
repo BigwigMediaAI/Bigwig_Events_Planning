@@ -9,10 +9,11 @@ import partyImage3 from "../assets/Hero/parties3.webp"; // Replace with actual i
 const CorporateFestivities: React.FC = () => {
   const subsections = [
     {
-      title: "Office Décor – Transform Your Workspace into a Festive Wonderland",
+      title:
+        "Office Décor – Transform Your Workspace into a Festive Wonderland",
       description:
         "Looking to brighten up your office with festive vibes, Our expert décor team can transform your workspace into a stunning, joyful environment—be it for the holiday season, annual celebrations, or themed occasions. From elegant designs to bold, colorful setups, we’ll make your office come alive with the festive spirit.",
-      images: [decorImage1, decorImage2,decorImage3],
+      images: [decorImage1, decorImage2, decorImage3],
     },
     {
       title: "Parties – Celebrate Success, Big or Small",
@@ -26,19 +27,22 @@ const CorporateFestivities: React.FC = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % subsections[0].images.length); // Loop through images
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % subsections[0].images.length
+      ); // Loop through images
     }, 3000); // Change every 3 seconds
 
     return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
 
   return (
-    <div id="event5" className="bg-gray-100 py-8 px-4">
+    <div id="event5" className=" py-8 px-4">
       <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
         Corporate Festivities
       </h1>
       <p className="text-center text-gray-600 mb-12">
-        Celebrate every occasion in style with our office décor and party planning services, tailored to make your festivities memorable.
+        Celebrate every occasion in style with our office décor and party
+        planning services, tailored to make your festivities memorable.
       </p>
       <div className="space-y-12 max-w-6xl mx-auto">
         {subsections.map((section, index) => (

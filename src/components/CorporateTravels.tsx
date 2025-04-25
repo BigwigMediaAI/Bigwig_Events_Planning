@@ -14,13 +14,13 @@ const CorporateTravels: React.FC = () => {
       title: "MICE (Meetings, Incentives, Conferences, Exhibitions)",
       description:
         "Make your next business gathering a resounding success. From high-level meetings and rewarding incentive trips to large-scale conferences and exhibitions, we handle all the logistics to ensure your event is productive, enjoyable, and perfectly executed.",
-      images: [miceImage1, miceImage2,miceImage3],
+      images: [miceImage1, miceImage2, miceImage3],
     },
     {
       title: "Offsites – Work Hard, Play Harder",
       description:
         "Want to strengthen team spirit while working in a refreshing new environment? Our expertly curated offsites blend professional development with relaxation and team bonding, helping your employees recharge and collaborate in inspiring destinations.",
-      images: [offsiteImage1, offsiteImage2,offsiteImage3],
+      images: [offsiteImage1, offsiteImage2, offsiteImage3],
     },
     {
       title: "Domestic Travel Packages – Discover New Horizons",
@@ -35,19 +35,25 @@ const CorporateTravels: React.FC = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % subsections[0].images.length); // Loop through images
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % subsections[0].images.length
+      ); // Loop through images
     }, 3000); // Change every 3 seconds
 
     return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
 
   return (
-    <div id="event3" className="bg-gray-100 py-8 px-4">
-      <h1 id="travels" className="text-4xl font-bold text-center text-gray-800 mb-8">
+    <div id="event3" className=" py-8 px-4">
+      <h1
+        id="travels"
+        className="text-4xl font-bold text-center text-gray-800 mb-8"
+      >
         Corporate Travels
       </h1>
       <p className="text-center text-gray-600 mb-12">
-        From MICE events to domestic travel packages, we ensure seamless corporate travel experiences tailored to your needs.
+        From MICE events to domestic travel packages, we ensure seamless
+        corporate travel experiences tailored to your needs.
       </p>
       <div className="space-y-12 max-w-6xl mx-auto">
         {subsections.map((section, index) => (
@@ -58,7 +64,9 @@ const CorporateTravels: React.FC = () => {
             }`}
           >
             <div className="p-6 md:w-1/2">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">{section.title}</h2>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                {section.title}
+              </h2>
               <p className="text-gray-600 mb-6">{section.description}</p>
             </div>
             <div className="md:w-1/2 p-4 relative">
