@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import img1 from "../assets/DB2A5526.webp";
 import img2 from "../assets/DB2A5541.webp";
 import img3 from "../assets/DSC_0074.webp";
@@ -273,14 +274,14 @@ const BigFolio: React.FC = () => {
         Gallery View
       </h1>
 
-      <section className="relative bg-black py-5">
+      <section className="relative bg-black py-5 md:px-20">
         <div className="flex items-center justify-center space-x-6">
           {/* Prev Button */}
           <button
             onClick={prevImage}
-            className="p-2 rounded-full bg-white shadow-md z-10"
+            className="p-2 rounded-full  shadow-md z-10"
           >
-            ◀
+            <ChevronLeft size={28} className="text-white" />
           </button>
 
           {/* Carousel Container */}
@@ -309,9 +310,9 @@ const BigFolio: React.FC = () => {
           {/* Next Button */}
           <button
             onClick={nextImage}
-            className="p-2 rounded-full bg-white shadow-md z-10"
+            className="p-2 rounded-full  shadow-md z-10"
           >
-            ▶
+            <ChevronRight size={28} className="text-white" />
           </button>
         </div>
 
