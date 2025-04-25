@@ -115,10 +115,10 @@ const HeroSection: React.FC = () => {
                     <ul className="space-y-2">
                       {[
                         ["Corporate Events", "event1"],
-                        ["Corporate Activations", "event2"],
                         ["Corporate Travels", "event3"],
                         ["Corporate Training", "event4"],
                         ["Corporate Festivities", "event5"],
+                        ["Corporate Activations", "event2"],
                       ].map(([label, id]) => (
                         <li key={id}>
                           <a
