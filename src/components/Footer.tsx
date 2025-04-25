@@ -1,4 +1,11 @@
 import logo from "../assets/Footer.png";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaLinkedin,
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -103,32 +110,39 @@ const Footer = () => {
           {/* Social Media Icons */}
           <div className="flex justify-start space-x-4 mt-6">
             <a
-              href="#"
-              aria-label="Instagram"
-              className="hover:text-yellow-500 text-2xl"
+              href="https://www.facebook.com/people/Bigwig-Digital/61575340735142/"
+              className="hover:bg-yellow-400 bg-gray-400 p-1 rounded"
+              target="blank"
             >
-              <i className="fab fa-instagram"></i>
+              <FaFacebookF color="black" />
             </a>
             <a
-              href="#"
-              aria-label="Facebook"
-              className="hover:text-yellow-500 text-2xl"
+              href="https://x.com/bigwig_digital"
+              className="hover:bg-yellow-400 bg-gray-400 p-1 rounded"
+              target="blank"
             >
-              <i className="fab fa-facebook"></i>
+              <FaXTwitter color="black" />
             </a>
             <a
-              href="#"
-              aria-label="Pinterest"
-              className="hover:text-yellow-500 text-2xl"
+              href="https://www.linkedin.com/company/106698073/admin/dashboard/"
+              className="hover:bg-yellow-400 bg-gray-400 p-1 rounded"
+              target="blank"
             >
-              <i className="fab fa-youtube"></i>
+              <FaLinkedin color="black" />
             </a>
             <a
-              href="#"
-              aria-label="Twitter"
-              className="hover:text-yellow-500 text-2xl"
+              href="https://www.instagram.com/bigwigdigital/?hl=en"
+              className="hover:bg-yellow-400 bg-gray-400 p-1 rounded"
+              target="blank"
             >
-              <i className="fab fa-twitter"></i>
+              <FaInstagram color="black" />
+            </a>
+            <a
+              href="https://www.youtube.com/@BigwigDigital2024"
+              className="hover:bg-yellow-400 bg-gray-400 p-1 rounded"
+              target="blank"
+            >
+              <FaYoutube color="black" />
             </a>
           </div>
         </div>

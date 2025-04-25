@@ -1,11 +1,11 @@
 import Footer2 from "../components/Footer2";
-import HeroSection from "../components/Hero";
+import Navbar from "../components/Nav";
 
 function Privacy() {
   return (
     <div className="bg-black text-white">
-      <HeroSection />
-      <div className="md:w-5/6 mx-auto px-10 py-10">
+      <Navbar />
+      <div className="md:w-5/6 mx-auto px-10 py-10 mt-16">
         <h1 className="text-yellow-400 text-4xl font-semibold text-center mb-10">
           Privacy Policy
         </h1>
