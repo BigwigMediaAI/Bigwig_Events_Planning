@@ -148,12 +148,12 @@ const Clients: React.FC = () => {
 
   return (
     <div id="bigclients" className="w-11/12 mx-auto  mt-16 mb-12">
-      <h1 className="text-4xl text-center mb-12 font-bold text-gray-800">
+      <h1 className="text-4xl text-center mb-12 font-bold text-white">
         Our Clients
       </h1>
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index} className="flex justify-center">
+          <div key={index} className="flex justify-center bg-[#d7d7eb]">
             <img
               src={image}
               alt={`logo-${index}`}
