@@ -53,7 +53,7 @@ function Landing() {
       <Footer />
 
       {/* Scroll Top Button - Conditionally Visible */}
-      <div className="fixed bottom-10 right-2 flex flex-col items-center space-y-4 z-50">
+      <div className="fixed bottom-10 right-10 flex flex-col items-center space-y-4 z-50">
         {isVisible && (
           <button
             onClick={scrollToTop}
