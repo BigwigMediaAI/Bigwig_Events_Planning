@@ -47,28 +47,28 @@ const CorporateActivationsATLBTL: React.FC = () => {
   }, []);
 
   return (
-    <div id="event2" className=" py-8 px-4 ">
-      <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
+    <div id="event2" className=" py-8 px-4 mb-10">
+      <h1 className="text-4xl font-bold text-center text-white mb-2">
         Corporate Activations
       </h1>
-      <p className="text-center text-gray-600 mb-12">
+      <p className="text-center text-gray-300 mb-12">
         Whether it's ATL for mass outreach or BTL for personalized engagement,
         we help execute impactful corporate activations.
       </p>
-      <div className="space-y-12 max-w-6xl mx-auto">
+      <div className="space-y-12 md:w-4/5 mx-auto">
         {subsections.map((section, index) => (
           <div
             key={index}
-            className={`flex flex-col md:flex-row items-start bg-white shadow-lg rounded-lg overflow-hidden ${
+            className={`flex flex-col md:flex-row md:h-[400px]  items-start bg-[#28282B] border border-gray-700 p-2 shadow-lg rounded-lg overflow-hidden ${
               index % 2 === 1 ? "md:flex-row-reverse" : ""
             }`}
           >
             <div className="p-6 md:w-1/2">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+              <h2 className="text-2xl font-semibold text-gray-200 mb-4">
                 {section.title}
               </h2>
-              <p className="text-gray-600 mb-6">{section.description}</p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-600">
+              <p className="text-gray-300 mb-6">{section.description}</p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-300">
                 {section.listItems.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
@@ -79,7 +79,7 @@ const CorporateActivationsATLBTL: React.FC = () => {
               <img
                 src={section.images[currentImageIndex]}
                 alt={`${section.title} ${currentImageIndex + 1}`}
-                className="w-full h-64 object-cover rounded-lg shadow-md transition-all duration-1000"
+                className="w-full h-64 md:h-[350px] object-cover rounded-lg shadow-md transition-all duration-1000"
               />
             </div>
           </div>
