@@ -52,7 +52,7 @@ const HeroSection: React.FC = () => {
   return (
     <div
       id="home"
-      className="relative h-screen bg-cover bg-center bg-no-repeat"
+      className="relative h-[60vh] md:h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${bg})` }}
     >
       {/* Overlay for dark tint */}
@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
           isScrolled ? "bg-black bg-opacity-65" : ""
         }`}
       >
-        <div className="md:w-5/6 mx-auto px-4 md:px-8 py-2 flex justify-between items-center">
+        <div className="md:w-11/12 mx-auto px-4 md:px-8 py-2 flex justify-between items-center">
           <div>
             <a href="/">
               <img

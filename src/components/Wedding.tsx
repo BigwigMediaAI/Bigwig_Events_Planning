@@ -7,7 +7,7 @@ const WeddingSection = () => {
   return (
     <div id="bigweddings" className="relative">
       {/* Content Section */}
-      <div className="relative z-10 px-6 md:px-12 lg:px-24 py-12">
+      <div className="relative md:w-11/12 mx-auto z-10 px-5 py-12">
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-white">
@@ -20,7 +20,7 @@ const WeddingSection = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="md:w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Section - Images */}
           <div className="grid grid-cols-2 gap-4">
             <div className="rounded-lg overflow-hidden shadow-lg h-60 border border-gray-500">
@@ -58,7 +58,7 @@ const WeddingSection = () => {
             <h2 className="text-3xl font-semibold text-gray-300 mb-4">
               Your Perfect Day, Tailored to You
             </h2>
-            <p className="text-justify md:text-left text-gray-300 mb-3">
+            <p className="text-justify text-gray-300 mb-3">
               At our wedding planning services, we specialize in transforming
               your dreams into reality. Whether it's a grand celebration or an
               intimate gathering, we ensure that every detail is carefully

@@ -47,7 +47,7 @@ const CorporateActivationsATLBTL: React.FC = () => {
   }, []);
 
   return (
-    <div id="event2" className=" py-8 px-4 mb-10">
+    <div id="event2" className=" py-8 px-4 md:px-10 mb-10">
       <h1 className="text-4xl font-bold text-center text-white mb-2">
         Corporate Activations
       </h1>
@@ -55,7 +55,7 @@ const CorporateActivationsATLBTL: React.FC = () => {
         Whether it's ATL for mass outreach or BTL for personalized engagement,
         we help execute impactful corporate activations.
       </p>
-      <div className="space-y-12 md:w-4/5 mx-auto">
+      <div className="space-y-12 md:w-11/12 mx-auto">
         {subsections.map((section, index) => (
           <div
             key={index}

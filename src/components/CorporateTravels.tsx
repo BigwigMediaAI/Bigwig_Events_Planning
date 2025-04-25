@@ -26,7 +26,7 @@ const CorporateTravels: React.FC = () => {
       title: "Domestic Travel Packages – Discover New Horizons",
       description:
         "Planning a business trip within the country? Our custom domestic travel packages cover everything from transportation and accommodation to curated itineraries ensuring a smooth and delightful travel experience for your team.",
-      images: [domesticImage1, domesticImage2],
+      images: [domesticImage1, domesticImage2, offsiteImage3],
     },
     // Add more subsections here if needed
   ];
@@ -44,7 +44,7 @@ const CorporateTravels: React.FC = () => {
   }, []);
 
   return (
-    <div id="event3" className=" py-8 px-4 mb-10">
+    <div id="event3" className=" py-8 px-4 md:px-10 mb-10">
       <h1
         id="travels"
         className="text-4xl font-bold text-center text-white mb-2"
@@ -55,7 +55,7 @@ const CorporateTravels: React.FC = () => {
         From MICE events to domestic travel packages, we ensure seamless
         corporate travel experiences tailored to your needs.
       </p>
-      <div className="space-y-12 md:w-4/5 mx-auto">
+      <div className="space-y-12 md:w-11/12 mx-auto">
         {subsections.map((section, index) => (
           <div
             key={index}

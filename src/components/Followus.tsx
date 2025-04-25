@@ -6,7 +6,7 @@ import follow4 from "../assets/IMG-20250113-WA0030.webp";
 
 const FollowUsSection: React.FC = () => {
   return (
-    <div className=" py-4">
+    <div className="md:w-11/12 mx-auto py-4 mb-10">
       {/* Heading Section */}
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-white">
@@ -16,7 +16,7 @@ const FollowUsSection: React.FC = () => {
       </div>
 
       {/* Image Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-8 mx-auto">
         <img
           src={follow1}
           alt="Event 1"
