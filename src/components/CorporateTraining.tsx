@@ -26,34 +26,34 @@ const CorporateTraining: React.FC = () => {
   }, []);
 
   return (
-    <div id="event4" className=" py-8 px-4">
-      <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
+    <div id="event4" className=" py-8 px-4 mb-10">
+      <h1 className="text-4xl font-bold text-center text-white mb-2">
         Corporate Training
       </h1>
-      <p className="text-center text-gray-600 mb-12">
+      <p className="text-center text-gray-300 mb-12">
         Empower your workforce with training and team-building activities that
         inspire and deliver results.
       </p>
-      <div className="space-y-12 max-w-6xl mx-auto">
+      <div className="space-y-12 md:w-4/5 mx-auto">
         {subsections.map((section, index) => (
           <div
             key={index}
-            className={`flex flex-col md:flex-row items-start bg-white shadow-lg rounded-lg overflow-hidden ${
+            className={`flex flex-col md:flex-row items-start p-2 md:h-[400px] bg-[#28282B] shadow-lg rounded-lg overflow-hidden border border-gray-700 ${
               index % 2 === 1 ? "md:flex-row-reverse" : ""
             }`}
           >
             <div className="p-6 md:w-1/2">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+              <h2 className="text-2xl font-semibold text-white mb-4">
                 {section.title}
               </h2>
-              <p className="text-gray-600 mb-6">{section.description}</p>
+              <p className="text-gray-300 mb-6">{section.description}</p>
             </div>
             <div className="md:w-1/2 p-4 relative">
               {/* Single image displayed with smooth transitions */}
               <img
                 src={section.images[currentImageIndex]}
                 alt={`${section.title} ${currentImageIndex + 1}`}
-                className="w-full h-64 object-cover rounded-lg shadow-md transition-all duration-1000"
+                className="w-full h-64 md:h-[350px] object-cover rounded-lg shadow-md transition-all duration-1000"
               />
             </div>
           </div>
