@@ -66,12 +66,13 @@ const HeroSection: React.FC = () => {
       >
         <div className="w-5/6 mx-auto px-4 md:px-8 py-2 flex justify-between items-center">
           <div>
-            <img
-              src={logo}
-              alt="Logo"
-              className="w-full max-w-[140px] cursor-pointer"
-              onClick={() => scrollToSection("top")}
-            />
+            <a href="/">
+              <img
+                src={logo}
+                alt="Logo"
+                className="w-full max-w-[140px] cursor-pointer"
+              />
+            </a>
           </div>
           <div className="hidden md:flex space-x-8 text-lg font-semibold relative text-white">
             {[
@@ -93,12 +94,22 @@ const HeroSection: React.FC = () => {
                   item === "BigEvents" && setBigEventsOpen(false)
                 }
               >
-                <a
-                  onClick={() => scrollToSection(item.toLowerCase())}
-                  className="cursor-pointer hover:text-yellow-400 transition-colors duration-300"
-                >
-                  {splitText(item)}
-                </a>
+                {item === "ContactUs" ? (
+                  // For ContactUs, add a border and make it a link to the contact page
+                  <a
+                    href="/contact" // Assuming "/contact" is the contact page URL
+                    className="border-2 border-yellow-400 px-4 py-2 rounded-lg text-white hover:text-yellow-400 transition-colors duration-300"
+                  >
+                    {splitText(item)}
+                  </a>
+                ) : (
+                  <a
+                    onClick={() => scrollToSection(item.toLowerCase())}
+                    className="cursor-pointer hover:text-yellow-400 transition-colors duration-300"
+                  >
+                    {splitText(item)}
+                  </a>
+                )}
                 {item === "BigEvents" && bigEventsOpen && (
                   <div className="absolute top-7 left-0 bg-black bg-opacity-70 text-white p-4 shadow-lg w-60 rounded">
                     <ul className="space-y-2">

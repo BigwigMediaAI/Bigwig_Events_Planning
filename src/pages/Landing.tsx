@@ -11,7 +11,6 @@ import CorporateTraining from "../components/CorporateTraining";
 import CorporateFestivities from "../components/CorporateFestivities";
 import WeddingSection from "../components/Wedding";
 import Clients from "../components/Clients";
-import ContactForm from "../components/Contact";
 
 function Landing() {
   const [isVisible, setIsVisible] = useState(false);
@@ -50,7 +49,6 @@ function Landing() {
       <Clients />
       <WeddingSection />
       <FollowUsSection />
-      <ContactForm />
 
       <Footer />
 
