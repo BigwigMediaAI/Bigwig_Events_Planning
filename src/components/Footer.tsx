@@ -69,10 +69,7 @@ const Footer = () => {
             </li>
 
             <li>
-              <a
-                onClick={() => scrollToSection("contactus")}
-                className="hover:underline cursor-pointer"
-              >
+              <a href="/contact" className="hover:underline cursor-pointer">
                 Contact<span className="text-yellow-500">Us</span>
               </a>
             </li>

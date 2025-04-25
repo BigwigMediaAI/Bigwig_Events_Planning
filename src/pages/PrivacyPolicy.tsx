@@ -1,128 +1,119 @@
-// src/pages/PrivacyPolicy.tsx
+import Footer2 from "../components/Footer2";
+import HeroSection from "../components/Hero";
 
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import Footer from "../components/Footer";
-
-const PrivacyPolicy: React.FC = () => {
-  const navigate = useNavigate();
-
+function Privacy() {
   return (
-    <>
-      <div className="container mx-auto px-4 py-10 max-w-4xl">
-        {/* Header Row with Back Button and Title */}
-        <div className="flex items-center justify-between mb-8">
-          <button
-            onClick={() => navigate("/")}
-            className="text-sm bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded"
-          >
-            Back to Home
-          </button>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 text-center flex-1">
-            Privacy Policy
-          </h1>
-        </div>
+    <div className="bg-black text-white">
+      <HeroSection />
+      <div className="md:w-5/6 mx-auto px-10 py-10">
+        <h1 className="text-yellow-400 text-4xl font-semibold text-center mb-10">
+          Privacy Policy
+        </h1>
+        <div className="space-y-8 text-base leading-relaxed">
+          <div>
+            <h2 className="text-2xl font-semibold">
+              What information do we collect?
+            </h2>
+            <p>
+              We collect information from you when you register on our site or
+              fill out a form. When ordering or registering on our site, as
+              appropriate, you may be asked to enter your: name or e-mail
+              address. You may, however, visit our site anonymously.
+            </p>
+          </div>
 
-        <div className="space-y-6 text-gray-700 text-sm leading-relaxed">
-          <p>
-            At <strong>Bigwig Events</strong>, your privacy is important to us.
-            This Privacy Policy outlines how we collect, use, and protect your
-            personal information when you interact with our website, services,
-            or contact us directly.
-          </p>
+          <div>
+            <h2 className="text-2xl font-semibold">
+              What do we use your information for?
+            </h2>
+            <p>
+              Any of the information we collect from you may be used in one of
+              the following ways:
+            </p>
+            <ul className="list-disc list-inside ml-4">
+              <li>To personalize your experience</li>
+              <li>To improve our website</li>
+              <li>To improve customer service</li>
+              <li>
+                To process transactions – Your information will not be sold,
+                exchanged, transferred, or given to any other company for any
+                reason without your consent, other than for delivering the
+                purchased product or service.
+              </li>
+              <li>
+                To send periodic emails – The email address you provide may be
+                used to send you information related to your order and
+                occasional updates.
+              </li>
+              <li>
+                To administer a contest, promotion, survey or other site feature
+              </li>
+            </ul>
+          </div>
 
-          <h2 className="text-xl font-semibold mt-6">
-            1. Information We Collect
-          </h2>
-          <p>
-            We may collect personal information that you voluntarily provide to
-            us, including your name, email address, phone number, and event
-            details when you fill out a form, contact us, or engage our
-            services.
-          </p>
+          <div>
+            <h2 className="text-2xl font-semibold">
+              How do we protect your information?
+            </h2>
+            <p>
+              We implement a variety of security measures to maintain the safety
+              of your personal information when you access it.
+            </p>
+          </div>
 
-          <h2 className="text-xl font-semibold mt-6">
-            2. How We Use Your Information
-          </h2>
-          <p>Your information may be used to:</p>
-          <ul className="list-disc list-inside ml-4">
-            <li>Respond to your inquiries and provide customer support</li>
-            <li>Plan and coordinate your event services</li>
-            <li>Send updates or promotional offers (only if you opt in)</li>
-            <li>Improve our website and services</li>
-          </ul>
+          <div>
+            <h2 className="text-2xl font-semibold">Do we use cookies?</h2>
+            <p>No, we do not use cookies.</p>
+          </div>
 
-          <h2 className="text-xl font-semibold mt-6">
-            3. Sharing of Information
-          </h2>
-          <p>
-            We do not sell or rent your personal information. We may share it
-            with trusted vendors or service providers only when necessary to
-            fulfill your event requirements, and only under strict
-            confidentiality agreements.
-          </p>
+          <div>
+            <h2 className="text-2xl font-semibold">
+              Do we disclose any information to outside parties?
+            </h2>
+            <p>
+              We do not sell, trade, or otherwise transfer your personally
+              identifiable information to outside parties. This does not include
+              trusted third parties who help us operate our website, conduct our
+              business, or service you, as long as those parties agree to keep
+              this information confidential. We may also release your
+              information when necessary to comply with the law or protect
+              rights, property, or safety.
+            </p>
+            <p>
+              Non-personally identifiable visitor information may be used for
+              marketing, advertising, or other uses.
+            </p>
+          </div>
 
-          <h2 className="text-xl font-semibold mt-6">4. Data Security</h2>
-          <p>
-            We implement appropriate technical and organizational measures to
-            protect your personal data from unauthorized access, loss, or
-            misuse.
-          </p>
+          <div>
+            <h2 className="text-2xl font-semibold">Third party links</h2>
+            <p>
+              Occasionally, we may include or offer third-party products or
+              services on our website. These sites have separate and independent
+              privacy policies. We have no responsibility for their content and
+              activities.
+            </p>
+          </div>
 
-          <h2 className="text-xl font-semibold mt-6">5. Your Rights</h2>
-          <p>
-            You have the right to access, correct, or delete your personal
-            information. To do so, please contact us at{" "}
-            <a
-              href="mailto:privacy@bigwigevents.com"
-              className="text-blue-600 underline"
-            >
-              privacy@bigwigevents.com
-            </a>
-            .
-          </p>
+          <div>
+            <h2 className="text-2xl font-semibold">
+              Online Privacy Policy Only
+            </h2>
+            <p>
+              This privacy policy applies only to information collected through
+              our website and not to information collected offline.
+            </p>
+          </div>
 
-          <h2 className="text-xl font-semibold mt-6">6. Cookies</h2>
-          <p>
-            Our website may use cookies to enhance your browsing experience. You
-            can disable cookies in your browser settings at any time.
-          </p>
-
-          <h2 className="text-xl font-semibold mt-6">7. Third-Party Links</h2>
-          <p>
-            Our website may contain links to external sites. We are not
-            responsible for the privacy practices or content of those sites.
-          </p>
-
-          <h2 className="text-xl font-semibold mt-6">
-            8. Changes to This Policy
-          </h2>
-          <p>
-            We may update this Privacy Policy periodically. Any changes will be
-            posted on this page with a revised effective date.
-          </p>
-
-          <h2 className="text-xl font-semibold mt-6">9. Contact Us</h2>
-          <p>
-            If you have any questions or concerns about our Privacy Policy,
-            please contact us at{" "}
-            <a
-              href="mailto:privacy@bigwigevents.com"
-              className="text-blue-600 underline"
-            >
-              privacy@bigwigevents.com
-            </a>
-            .
-          </p>
-
-          <p className="text-gray-500 text-xs mt-8">
-            Last updated: April 15, 2025
-          </p>
+          <div>
+            <h2 className="text-2xl font-semibold">Your Consent</h2>
+            <p>By using our site, you consent to our privacy policy.</p>
+          </div>
         </div>
       </div>
-      <Footer />
-    </>
+      <Footer2 />
+    </div>
   );
-};
+}
 
-export default PrivacyPolicy;
+export default Privacy;

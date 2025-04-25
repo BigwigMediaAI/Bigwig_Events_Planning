@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
           isScrolled ? "bg-black bg-opacity-65" : ""
         }`}
       >
-        <div className="w-5/6 mx-auto px-4 md:px-8 py-2 flex justify-between items-center">
+        <div className="md:w-5/6 mx-auto px-4 md:px-8 py-2 flex justify-between items-center">
           <div>
             <a href="/">
               <img
