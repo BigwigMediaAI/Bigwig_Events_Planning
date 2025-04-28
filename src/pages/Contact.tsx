@@ -85,11 +85,11 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="  bg-white min-h-screen text-white">
+    <div className="  bg-black min-h-screen text-white">
       <Navbar />
 
-      <section className="w-full md:w-5/6 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8 mt-28  text-black">
-        <div className="pt-4">
+      <section className="w-full md:w-11/12 px-4 md:px-8 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-8 mt-16 ">
+        <div className="pt-8">
           <h2 className="text-2xl mb-2 font-semibold">Dubai</h2>
           <hr />
           <h2 className="text-xl mb-2 font-semibold">Head Office</h2>
@@ -127,7 +127,9 @@ export default function ContactPage() {
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold mb-2 font-sans">Get in Touch</h2>
+          <h2 className="text-xl font-semibold mb-2 pt-8 font-sans">
+            Get in Touch
+          </h2>
           <p className="mb-4 text-gray-600 font-sans">
             Please contact us via phone or email below or visit us at our Head
             Office in Business Bay during operating hours.
@@ -174,19 +176,19 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <h2 className="px-5 w-full md:w-[90%] mx-auto text-lg text-[var(--secondary-color)]">
+      <h2 className=" w-full md:w-11/12 px-4 md:px-8 mx-auto text-lg text-[var(--secondary-color)]">
         Have questions, need marketing advice, or interested in growing your
         brand online?
       </h2>
-      <p className="px-5 w-full md:w-[90%] mx-auto text-md text-gray-600">
+      <p className=" w-full md:w-11/12 px-4 md:px-8 mx-auto text-md text-gray-600">
         Reach out to us via email, phone, or simply fill out the form below.
         Your inquiry will be directed to the right Bigwig Digital marketing
         expert, and we’ll get back to you within 24 hours.
       </p>
 
-      <div className="flex flex-col md:flex-row justify-center items-start w-full md:w-[90%] mx-auto px-6 py-8 gap-10 mb-7 bg-white">
+      <div className="flex flex-col md:flex-row justify-center items-start w-full md:w-11/12 px-4 md:px-8 mx-auto py-5 mt-3 rounded-md gap-10 mb-7">
         {/* Form Section */}
-        <div className="w-full md:w-1/2 max-w-lg bg-[#f7f5f5] rounded-lg p-8 shadow-lg text-left text-white">
+        <div className="w-full md:w-1/3 bg-[#f7f5f5] rounded-lg p-8 shadow-lg text-left text-white">
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
@@ -233,7 +235,7 @@ export default function ContactPage() {
             />
             <button
               type="submit"
-              className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg w-full transition font-semibold"
+              className="bg-yellow-400 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg w-full transition font-semibold"
             >
               {formSubmitted ? "Thank You!" : "SUBMIT"}
             </button>
@@ -241,7 +243,7 @@ export default function ContactPage() {
         </div>
 
         {/* Map Section */}
-        <div className="w-full md:w-1/2 h-[450px] rounded-lg overflow-hidden shadow-lg border border-gray-700">
+        <div className="w-full md:w-2/3 h-[450px] rounded-lg overflow-hidden shadow-lg border border-gray-700">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.668560792657!2d55.264871674024235!3d25.18066683237258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69004a524faf%3A0x13d5b1575adb574a!2sBusiness%20Bay!5e0!3m2!1sen!2sin!4v1744201890505!5m2!1sen!2sin"
             width="100%"
