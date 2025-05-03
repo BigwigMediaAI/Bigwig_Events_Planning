@@ -5,7 +5,7 @@ import { Mail, MessageSquareText, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import emailjs from "emailjs-com";
 import Footer2 from "../components/Footer2";
-import Navbar from "../components/Nav";
+import Nav from "../components/Nav";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -85,10 +85,9 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="  bg-white min-h-screen text-white">
-      <Navbar />
-
-      <section className="w-full md:w-5/6 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8 mt-28  text-black">
+    <div className="pt-24 bg-black min-h-screen text-white">
+      <Nav />
+      <section className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8  text-white">
         <div className="pt-4">
           <h2 className="text-2xl mb-2 font-semibold">Dubai</h2>
           <hr />
@@ -120,7 +119,7 @@ export default function ContactPage() {
             9/136 Marua Road, Mount Wellington, Auckland 1051
           </p>
 
-          <p className="text-gray-600 mt-8">
+          <p className="text-gray-400 mt-8">
             Our business operating hours are as follows:
           </p>
           <p className="mt-2">Monday to Saturday: 10:30am - 7:30pm</p>
@@ -128,7 +127,7 @@ export default function ContactPage() {
 
         <div>
           <h2 className="text-xl font-semibold mb-2 font-sans">Get in Touch</h2>
-          <p className="mb-4 text-gray-600 font-sans">
+          <p className="mb-4 text-gray-400 font-sans">
             Please contact us via phone or email below or visit us at our Head
             Office in Business Bay during operating hours.
           </p>
@@ -137,7 +136,15 @@ export default function ContactPage() {
             {/* Phone Button */}
             <div className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans">
               <Phone className="w-6 h-6 text-gray-700" />
-              <span className="text-sm text-gray-700">+91 83685 73451</span>
+              <span className="text-sm text-gray-700">
+                +971 502615979 (Dubai)
+              </span>
+            </div>
+            <div className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans">
+              <Phone className="w-6 h-6 text-gray-700" />
+              <span className="text-sm text-gray-700">
+                +91 83685 73451 (India)
+              </span>
             </div>
 
             {/* WhatsApp Button */}
@@ -178,15 +185,15 @@ export default function ContactPage() {
         Have questions, need marketing advice, or interested in growing your
         brand online?
       </h2>
-      <p className="px-5 w-full md:w-[90%] mx-auto text-md text-gray-600">
+      <p className="px-5 w-full md:w-[90%] mx-auto text-md text-gray-400">
         Reach out to us via email, phone, or simply fill out the form below.
         Your inquiry will be directed to the right Bigwig Digital marketing
         expert, and we’ll get back to you within 24 hours.
       </p>
 
-      <div className="flex flex-col md:flex-row justify-center items-start w-full md:w-[90%] mx-auto px-6 py-8 gap-10 mb-7 bg-white">
+      <div className="flex flex-col md:flex-row justify-center items-start mx-auto py-8 gap-10 mb-7 bg-black">
         {/* Form Section */}
-        <div className="w-full md:w-1/2 max-w-lg bg-[#f7f5f5] rounded-lg p-8 shadow-lg text-left text-white">
+        <div className="w-full md:w-1/2 max-w-lg bg-[#2c2c2c] rounded-lg p-8 shadow-lg text-left text-white">
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
