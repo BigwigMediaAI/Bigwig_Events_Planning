@@ -1,96 +1,86 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import rnrImage1 from "../assets/Hero/RR2.webp";
-import rnrImage2 from "../assets/Hero/RR.webp";
-import rnrImage3 from "../assets/Hero/awards2.webp";
 import awardsImage1 from "../assets/Hero/awards.webp";
-import awardsImage2 from "../assets/Hero/awards.webp";
-import awardsImage3 from "../assets/Hero/RR4.webp";
 import productLaunchImage1 from "../assets/Hero/productlaunch.webp";
-import productLaunchImage2 from "../assets/Hero/productlaunch2.webp";
-import productLaunchImage3 from "../assets/Hero/productlaunch3.webp";
 import townhallsImage1 from "../assets/background.webp";
-import townhallsImage2 from "../assets/Hero/town1.webp";
-import townhallsImage3 from "../assets/Hero/town2.webp";
 
 const CorporateEvents: React.FC = () => {
-  const subsections = [
+  const sections = [
     {
-      title:
-        "🎉 Rewards & Recognition (R&R) – Celebrate Success, Inspire Greatness",
+      title: "Rewards & Recognition",
+      subtitle: "Celebrate success with impact.",
       description:
-        "Your team works hard—why not celebrate their achievements in style We specialize in creating Rewards & Recognition events that leave employees feeling valued and motivated. From creative award themes to personalized experiences, we’ll help you reward success in the most unforgettable way.",
-      images: [rnrImage1, rnrImage2, rnrImage3],
+        "We create memorable recognition events that celebrate achievement, boost morale, and strengthen culture.",
+      image: rnrImage1,
     },
     {
-      title: "🏆 Awards – Honoring Excellence with Elegance",
+      title: "Awards Ceremonies",
+      subtitle: "Elegant production for every winner.",
       description:
-        "Host an awards ceremony that your employees and guests will talk about long after the event is over. We’ll design a glamorous, well-organized event with everything from stunning décor to custom trophies, making every winner feel like a star.",
-      images: [awardsImage1, awardsImage2, awardsImage3],
+        "From stage lighting to guest experience, we design award nights that feel premium and unforgettable.",
+      image: awardsImage1,
     },
     {
-      title: "🚀 Product Launch – Unveil Your Innovation with a Bang",
+      title: "Product Launches",
+      subtitle: "Reveal your next big idea.",
       description:
-        "Launching a new product? Let’s turn your launch into a show-stopping event! With immersive presentations, dazzling visuals, and seamless execution, we’ll help you make a powerful first impression on your audience and the market.",
-      images: [productLaunchImage1, productLaunchImage2, productLaunchImage3],
+        "We build launch experiences that showcase your product with energy, storytelling, and polished execution.",
+      image: productLaunchImage1,
     },
     {
-      title: "📢 Townhalls – Communicate, Collaborate, Connect",
+      title: "Townhalls",
+      subtitle: "Connect teams with clarity.",
       description:
-        "Townhalls are more than just meetings—they’re an opportunity to bring your entire organization together. We’ll help you create a townhall event that’s interactive, engaging, and professionally managed, ensuring your message is delivered with impact",
-      images: [townhallsImage1, townhallsImage2, townhallsImage3],
+        "Interactive townhalls that elevate communication and keep every attendee engaged from start to finish.",
+      image: townhallsImage1,
     },
   ];
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex(
-        (prevIndex) => (prevIndex + 1) % subsections[0].images.length
-      ); // Loop through images
-    }, 3000); // Change every 3 seconds
-
-    return () => clearInterval(interval); // Cleanup on component unmount
-  }, []);
-
   return (
-    <div id="bigevents" className=" py-8 px-4 md:px-10 mb-10">
-      <h1
-        id="event1"
-        className="text-4xl font-semibold text-center text-white mb-2"
-      >
-        Corporate Events
-      </h1>
-      <p className="text-center text-gray-300 mb-12">
-        From rewards and recognition to product launches, we deliver exceptional
-        corporate events tailored to your needs.
-      </p>
-      <div className="space-y-12 md:w-11/12 mx-auto">
-        {subsections.map((section, index) => (
-          <div
-            key={index}
-            className={`flex flex-col md:flex-row items-start p-2 md:h-[400px] bg-[#28282B] shadow-lg rounded-lg overflow-hidden border border-gray-700 ${
-              index % 2 === 1 ? "md:flex-row-reverse" : ""
-            }`}
-          >
-            <div className="p-6 md:w-1/2">
-              <h2 className="text-2xl font-semibold text-white mb-4">
-                {section.title}
-              </h2>
-              <p className="text-gray-300 mb-6">{section.description}</p>
+    <section id="bigevents" className="py-16 bg-[#090909]">
+      <div className="max-w-6xl mx-auto px-4 md:px-8">
+        <div className="text-center mb-12">
+          <p className="text-sm uppercase tracking-[0.35em] text-yellow-400 mb-3">
+            corporate events
+          </p>
+          <h2 className="text-4xl md:text-5xl font-semibold text-white">
+            Executive experiences designed for every team.
+          </h2>
+          <p className="mt-4 text-gray-300 max-w-3xl mx-auto leading-8">
+            From R&R awards to launches and townhalls, we plan corporate events
+            that feel elegant, strategic, and distinctly tailored to your brand.
+          </p>
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-2">
+          {sections.map((section, index) => (
+            <div
+              key={index}
+              className="group overflow-hidden rounded-[32px] border border-gray-800 bg-[#121212] shadow-[0_30px_80px_rgba(0,0,0,0.45)] transition-transform duration-300 hover:-translate-y-1"
+            >
+              <div className="relative h-72 overflow-hidden">
+                <img
+                  src={section.image}
+                  alt={section.title}
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6">
+                  <p className="text-sm uppercase tracking-[0.35em] text-yellow-400">
+                    {section.title}
+                  </p>
+                  <p className="text-white text-2xl font-semibold mt-3">
+                    {section.subtitle}
+                  </p>
+                </div>
+              </div>
+              <div className="p-8">
+                <p className="text-gray-300 leading-7">{section.description}</p>
+              </div>
             </div>
-            <div className="md:w-1/2 p-4 relative">
-              {/* Single image displayed with smooth transitions */}
-              <img
-                src={section.images[currentImageIndex]}
-                alt={`${section.title} ${currentImageIndex + 1}`}
-                className="w-full h-64 md:h-[350px] object-cover rounded-lg shadow-md transition-all duration-1000"
-              />
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

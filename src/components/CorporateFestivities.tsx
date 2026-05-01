@@ -1,75 +1,70 @@
-import React, { useEffect, useState } from "react";
-import decorImage1 from "../assets/Hero/Decor.webp"; // Replace with actual images
-import decorImage2 from "../assets/Hero/Decor2.webp"; // Replace with actual images
-import decorImage3 from "../assets/Hero/Decor3.webp"; // Replace with actual images
-import partyImage1 from "../assets/Hero/parties.webp"; // Replace with actual images
-import partyImage2 from "../assets/Hero/parties2.webp"; // Replace with actual images
-import partyImage3 from "../assets/Hero/parties3.webp"; // Replace with actual images
+import React from "react";
+import decorImage1 from "../assets/Hero/Decor.webp";
+import partyImage1 from "../assets/Hero/parties.webp";
 
 const CorporateFestivities: React.FC = () => {
-  const subsections = [
+  const events = [
     {
-      title:
-        "Office Décor – Transform Your Workspace into a Festive Wonderland",
+      title: "Office Décor",
+      subtitle: "Set the scene with premium style.",
       description:
-        "Looking to brighten up your office with festive vibes, Our expert décor team can transform your workspace into a stunning, joyful environment—be it for the holiday season, annual celebrations, or themed occasions. From elegant designs to bold, colorful setups, we’ll make your office come alive with the festive spirit.",
-      images: [decorImage1, decorImage2, decorImage3],
+        "From holiday themes to branded activations, our décor transforms spaces into immersive environments.",
+      image: decorImage1,
     },
     {
-      title: "Parties – Celebrate Success, Big or Small",
+      title: "Celebration Parties",
+      subtitle: "Designed for joy and remarkable moments.",
       description:
-        "Whether it’s a year-end bash, a milestone celebration, or a festival party, we know how to throw an event your team will rave about. From venue selection and décor to entertainment and catering, we handle everything so you can focus on enjoying the moment. Let’s make your next party an unforgettable experience!",
-      images: [partyImage1, partyImage2, partyImage3],
+        "We plan parties that feel polished, fun, and effortless from start to finish.",
+      image: partyImage1,
     },
   ];
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex(
-        (prevIndex) => (prevIndex + 1) % subsections[0].images.length
-      ); // Loop through images
-    }, 3000); // Change every 3 seconds
-
-    return () => clearInterval(interval); // Cleanup on component unmount
-  }, []);
-
   return (
-    <div id="event5" className=" py-8 px-4 md:px-10 mb-10">
-      <h1 className="text-4xl font-semibold text-center text-white mb-2">
-        Corporate Festivities
-      </h1>
-      <p className="text-center text-gray-300 mb-12">
-        Celebrate every occasion in style with our office décor and party
-        planning services, tailored to make your festivities memorable.
-      </p>
-      <div className="space-y-12 md:w-11/12 mx-auto">
-        {subsections.map((section, index) => (
-          <div
-            key={index}
-            className={`flex flex-col md:flex-row items-start md:[400px] bg-[#28282B] border border-gray-700 p-2 shadow-lg rounded-lg overflow-hidden ${
-              index % 2 === 1 ? "md:flex-row-reverse" : ""
-            }`}
-          >
-            <div className="p-6 md:w-1/2">
-              <h2 className="text-2xl font-semibold text-gray-200 mb-4">
-                {section.title}
-              </h2>
-              <p className="text-gray-300 mb-6">{section.description}</p>
+    <section id="event5" className="py-16 bg-[#090909]">
+      <div className="max-w-6xl mx-auto px-4 md:px-8">
+        <div className="text-center mb-12">
+          <p className="text-sm uppercase tracking-[0.35em] text-yellow-400 mb-3">
+            corporate festivities
+          </p>
+          <h2 className="text-4xl md:text-5xl font-semibold text-white">
+            Festive experiences crafted with bold, modern style.
+          </h2>
+          <p className="mt-4 text-gray-300 max-w-3xl mx-auto leading-8">
+            We combine decor, entertainment and seamless planning to deliver
+            celebrations that look incredible and feel effortless.
+          </p>
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-2">
+          {events.map((item, index) => (
+            <div
+              key={index}
+              className="group overflow-hidden rounded-[32px] border border-gray-800 bg-[#121212] shadow-[0_30px_80px_rgba(0,0,0,0.45)] transition-transform duration-300 hover:-translate-y-1"
+            >
+              <div className="relative h-72 overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6">
+                  <p className="text-sm uppercase tracking-[0.35em] text-yellow-400">
+                    {item.title}
+                  </p>
+                  <h3 className="text-white text-2xl font-semibold mt-3">
+                    {item.subtitle}
+                  </h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <p className="text-gray-300 leading-7">{item.description}</p>
+              </div>
             </div>
-            <div className="md:w-1/2 p-4 relative">
-              {/* Single image displayed with smooth transitions */}
-              <img
-                src={section.images[currentImageIndex]}
-                alt={`${section.title} ${currentImageIndex + 1}`}
-                className="w-full h-64 md:h-[350px] object-cover rounded-lg shadow-md transition-all duration-1000"
-              />
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

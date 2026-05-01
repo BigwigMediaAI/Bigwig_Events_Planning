@@ -52,19 +52,19 @@ const HeroSection: React.FC = () => {
   return (
     <div
       id="home"
-      className="relative h-[60vh] md:h-screen bg-cover bg-center bg-no-repeat"
+      className="relative min-h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${bg})` }}
     >
       {/* Overlay for dark tint */}
-      <div className="absolute inset-0 bg-black bg-opacity-60 z-0" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.12),_transparent_35%),linear-gradient(180deg,rgba(0,0,0,0.48),rgba(0,0,0,0.9))] z-0" />
 
       {/* Navbar */}
       <nav
         className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
-          isScrolled ? "bg-black bg-opacity-65" : ""
+          isScrolled ? "bg-slate-950/90 backdrop-blur-md shadow-xl" : ""
         }`}
       >
-        <div className="md:w-11/12 mx-auto px-4 md:px-8 py-2 flex justify-between items-center">
+        <div className="md:w-11/12 mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
           <div>
             <a href="/">
               <img
@@ -74,7 +74,8 @@ const HeroSection: React.FC = () => {
               />
             </a>
           </div>
-          <div className="hidden md:flex space-x-8 text-lg font-semibold relative text-white">
+
+          <div className="hidden md:flex items-center space-x-10 text-lg font-semibold text-white">
             {[
               "Home",
               "AboutUs",
@@ -95,23 +96,22 @@ const HeroSection: React.FC = () => {
                 }
               >
                 {item === "ContactUs" ? (
-                  // For ContactUs, add a border and make it a link to the contact page
                   <a
-                    href="/contact" // Assuming "/contact" is the contact page URL
-                    className="border-2 border-yellow-400 px-4 py-2 rounded-lg text-white hover:text-yellow-400 transition-colors duration-300"
+                    href="/contact"
+                    className="border-2 border-yellow-400 px-4 py-2 rounded-full text-white hover:border-white hover:text-yellow-400 transition-colors duration-300"
                   >
                     {splitText(item)}
                   </a>
                 ) : (
-                  <a
+                  <button
                     onClick={() => scrollToSection(item.toLowerCase())}
                     className="cursor-pointer hover:text-yellow-400 transition-colors duration-300"
                   >
                     {splitText(item)}
-                  </a>
+                  </button>
                 )}
                 {item === "BigEvents" && bigEventsOpen && (
-                  <div className="absolute top-7 left-0 bg-black bg-opacity-70 text-white p-4 shadow-lg w-60 rounded">
+                  <div className="absolute top-12 left-0 bg-slate-900/95 text-white p-4 shadow-2xl w-64 rounded-2xl">
                     <ul className="space-y-2">
                       {[
                         ["Corporate Events", "event1"],
@@ -121,12 +121,12 @@ const HeroSection: React.FC = () => {
                         ["Corporate Activations", "event2"],
                       ].map(([label, id]) => (
                         <li key={id}>
-                          <a
+                          <button
                             onClick={() => scrollToSection(id)}
-                            className="block hover:text-yellow-400 transition-colors cursor-pointer"
+                            className="w-full text-left hover:text-yellow-400 transition-colors duration-300"
                           >
                             {label}
-                          </a>
+                          </button>
                         </li>
                       ))}
                     </ul>
@@ -135,10 +135,12 @@ const HeroSection: React.FC = () => {
               </div>
             ))}
           </div>
+
           <div className="md:hidden">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="text-yellow-400 text-3xl focus:outline-none"
+              aria-label="Open menu"
             >
               ☰
             </button>
@@ -146,36 +148,69 @@ const HeroSection: React.FC = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="fixed top-16 left-0 w-full bg-black bg-opacity-90 text-white flex flex-col items-center space-y-4 py-4 z-20">
-          {[
-            "Home",
-            "AboutUs",
-            "BigEvents",
-            "BigFolio",
-            "BigClients",
-            "BigWeddings",
-            "ContactUs",
-          ].map((item) => (
-            <a
-              key={item}
-              onClick={() => scrollToSection(item.toLowerCase())}
-              className="cursor-pointer hover:text-yellow-400 transition-colors duration-300"
+      {/* Mobile Side Menu */}
+      <div
+        className={`fixed inset-0 z-50 transition-transform duration-300 ease-out pointer-events-none ${
+          menuOpen ? "pointer-events-auto" : ""
+        }`}
+      >
+        <div
+          className={`absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${
+            menuOpen ? "opacity-100" : "opacity-0"
+          }`}
+          onClick={() => setMenuOpen(false)}
+        />
+        <aside
+          className={`fixed top-0 right-0 h-full w-11/12 max-w-sm bg-slate-950/95 shadow-2xl border-l border-white/10 backdrop-blur-xl transition-transform duration-300 ease-out ${
+            menuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
+            <div>
+              <img
+                src={logo}
+                alt="Logo"
+                className="w-full max-w-[140px] cursor-pointer"
+              />
+            </div>
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="text-3xl text-white focus:outline-none"
+              aria-label="Close menu"
             >
-              {splitText(item)}
-            </a>
-          ))}
-        </div>
-      )}
+              ×
+            </button>
+          </div>
+
+          <div className="px-6 py-8 space-y-6 text-white">
+            {[
+              "Home",
+              "AboutUs",
+              "BigEvents",
+              "BigFolio",
+              "BigClients",
+              "BigWeddings",
+              "ContactUs",
+            ].map((item) => (
+              <button
+                key={item}
+                onClick={() => {
+                  scrollToSection(item.toLowerCase());
+                  setMenuOpen(false);
+                }}
+                className="w-full text-left text-2xl font-semibold hover:text-yellow-400 transition-colors duration-300"
+              >
+                {splitText(item)}
+              </button>
+            ))}
+          </div>
+        </aside>
+      </div>
 
       {/* Hero Content */}
-      <div
-        id="top"
-        className="absolute inset-0 flex flex-col justify-center items-center text-center text-gray-300 px-4 z-10"
-      >
-        <div className="w-5/6 mx-auto">
-          <h1 className="text-3xl md:text-5xl font-bold">
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4 z-10">
+        <div className="mx-auto w-full max-w-5xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight md:leading-snug drop-shadow-2xl">
             <Typewriter
               options={{
                 strings: ["Big Moments, Big Memories - Crafted Just for You"],
@@ -185,10 +220,30 @@ const HeroSection: React.FC = () => {
               }}
             />
           </h1>
-          <p className="text-lg md:text-xl mt-4">
-            From grand weddings to awe-inspiring events, we bring your vision to
-            life.
+
+          <p className="mx-auto mt-6 max-w-3xl text-base sm:text-lg md:text-xl text-slate-200/95 leading-relaxed">
+            From grand weddings to immersive corporate activations, our team
+            delivers bespoke planning, immersive design, and flawless execution
+            across every detail.
           </p>
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-3">
+            {[
+              ["Weddings", "Elegant ceremonies & receptions"],
+              ["Corporate Events", "Professional brand experiences"],
+              ["Travel & Retreats", "Curated journeys for teams"],
+            ].map(([title, subtitle]) => (
+              <div
+                key={title}
+                className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-xl shadow-2xl shadow-black/20"
+              >
+                <h2 className="text-xl font-semibold text-white mb-2">
+                  {title}
+                </h2>
+                <p className="text-sm text-slate-300">{subtitle}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import img1 from "../assets/DB2A5526.webp";
 import img2 from "../assets/DB2A5541.webp";
 import img3 from "../assets/DSC_0074.webp";
@@ -39,7 +40,6 @@ import img36 from "../assets/_MG_5102.webp";
 import img37 from "../assets/_MG_5119.webp";
 import img38 from "../assets/_MG_5156.webp";
 import img39 from "../assets/_MG_5260.webp";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface ImageItem {
   src: string;
@@ -48,202 +48,45 @@ interface ImageItem {
 }
 
 const images: ImageItem[] = [
-  {
-    src: img1, // Replace with actual image URL
-    alt: "Newport Fairytale",
-    label: "NEWPORT FAIRYTALE",
-  },
-  {
-    src: img2, // Replace with actual image URL
-    alt: "Whimsical Boathouse",
-    label: "WHIMSICAL BOATHOUSE",
-  },
-  {
-    src: img3, // Replace with actual image URL
-    alt: "Southern Elegance",
-    label: "SOUTHERN ELEGANCE",
-  },
-  {
-    src: img4, // Replace with actual image URL
-    alt: "FARMHOUSE CHIC",
-    label: "FARMHOUSE CHIC",
-  },
-  {
-    src: img5, // Replace with actual image URL
-    alt: "LAKESIDE HUDSON VALLEY",
-    label: "LAKESIDE HUDSON VALLEY",
-  },
-  {
-    src: img6, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img7, // Replace with actual image URL
-    alt: "TENTED BOSTON ROOFTOP",
-    label: "TENTED BOSTON ROOFTOP",
-  },
-  {
-    src: img8, // Replace with actual image URL
-    alt: "MODERN MUSEUM",
-    label: "MODERN MUSEUM",
-  },
-  {
-    src: img9, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img10, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img11, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img12, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img13, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img14, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img15, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img16, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img17, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img18, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img19, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img20, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img21, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img22, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img23, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img24, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img25, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img26, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img27, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img28, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img29, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img30, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img31, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img32, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img33, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img34, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img35, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img36, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img37, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img38, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  {
-    src: img39, // Replace with actual image URL
-    alt: "ROMANTIC MEXICO",
-    label: "ROMANTIC MEXICO",
-  },
-  // Add more images here
+  { src: img1, alt: "Newport Fairytale", label: "NEWPORT FAIRYTALE" },
+  { src: img2, alt: "Whimsical Boathouse", label: "WHIMSICAL BOATHOUSE" },
+  { src: img3, alt: "Southern Elegance", label: "SOUTHERN ELEGANCE" },
+  { src: img4, alt: "Farmhouse Chic", label: "FARMHOUSE CHIC" },
+  { src: img5, alt: "Lakeside Hudson Valley", label: "LAKESIDE HUDSON VALLEY" },
+  { src: img6, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img7, alt: "Tented Boston Rooftop", label: "TENTED BOSTON ROOFTOP" },
+  { src: img8, alt: "Modern Museum", label: "MODERN MUSEUM" },
+  { src: img9, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img10, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img11, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img12, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img13, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img14, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img15, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img16, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img17, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img18, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img19, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img20, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img21, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img22, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img23, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img24, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img25, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img26, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img27, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img28, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img29, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img30, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img31, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img32, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img33, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img34, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img35, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img36, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img37, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img38, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
+  { src: img39, alt: "Romantic Mexico", label: "ROMANTIC MEXICO" },
 ];
 
 const BigFolio: React.FC = () => {
@@ -251,87 +94,93 @@ const BigFolio: React.FC = () => {
 
   const nextImage = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
   const prevImage = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1,
     );
   };
 
   useEffect(() => {
-    const interval = setInterval(nextImage, 3000); // Change image every 3 seconds
-
-    // Clean up the interval when the component is unmounted or user interacts
+    const interval = setInterval(nextImage, 3000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div id="bigfolio" className=" mt-10">
-      <h1 className="text-4xl font-semibold text-center text-white mb-8">
-        Gallery View
-      </h1>
+    <section id="bigfolio" className="py-16 bg-[#050505]">
+      <div className="max-w-6xl mx-auto px-4 md:px-8">
+        <div className="text-center mb-10">
+          <p className="text-sm uppercase tracking-[0.35em] text-yellow-400 mb-3">
+            gallery view
+          </p>
+          <h2 className="text-4xl md:text-5xl font-semibold text-white">
+            A curated portfolio of events and bold visual moments.
+          </h2>
+          <p className="mt-4 text-gray-300 max-w-3xl mx-auto leading-8">
+            Explore our signature work through a refined gallery experience
+            built to highlight large-format imagery in a premium setting.
+          </p>
+        </div>
 
-      <section className="relative bg-black py-5 md:px-20">
-        <div className="flex items-center justify-center space-x-6">
-          {/* Prev Button */}
-          <button
-            onClick={prevImage}
-            className="p-2 rounded-full  shadow-md z-10"
-          >
-            <ChevronLeft size={28} className="text-white" />
-          </button>
+        <div className="relative overflow-hidden rounded-[32px] border border-gray-800 bg-[#121212] shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+          <div className="flex flex-col gap-4 px-4 py-4 md:px-8 md:flex-row md:items-center md:justify-between">
+            <div className="flex items-center gap-4">
+              <button
+                onClick={prevImage}
+                className="h-12 w-12 rounded-full bg-white/10 text-white transition hover:bg-yellow-400 hover:text-black"
+                aria-label="Previous image"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <button
+                onClick={nextImage}
+                className="h-12 w-12 rounded-full bg-white/10 text-white transition hover:bg-yellow-400 hover:text-black"
+                aria-label="Next image"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+            <div className="text-sm uppercase tracking-[0.35em] text-gray-400">
+              {currentIndex + 1}/{images.length}
+            </div>
+          </div>
 
-          {/* Carousel Container */}
-          <div className="overflow-hidden w-full">
+          <div className="relative h-[520px] overflow-hidden">
             <div
-              className="flex transition-transform duration-700 ease-in-out"
-              style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
-              }}
+              className="flex h-full transition-transform duration-700 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {images.map((image, index) => (
-                <div
-                  key={index}
-                  className="w-full flex-shrink-0 flex justify-center items-center relative"
-                >
+                <div key={index} className="w-full flex-shrink-0 relative">
                   <LazyLoadImage
                     src={image.src}
                     alt={image.alt}
-                    className="rounded-lg max-w-7xl h-[500px] "
+                    className="h-full w-full object-cover"
                   />
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Next Button */}
-          <button
-            onClick={nextImage}
-            className="p-2 rounded-full  shadow-md z-10"
-          >
-            <ChevronRight size={28} className="text-white" />
-          </button>
+          <div className="hidden md:flex justify-center gap-3 p-4">
+            {images.slice(0, 8).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`h-2 w-8 rounded-full transition ${
+                  index === currentIndex
+                    ? "bg-yellow-400"
+                    : "bg-gray-600 hover:bg-yellow-400"
+                }`}
+              />
+            ))}
+          </div>
         </div>
-
-        {/* Dots Navigation */}
-        <div className="hidden md:flex justify-center mt-4 space-x-2">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              className={`w-4 h-2 rounded-full ${
-                index === currentIndex
-                  ? "bg-yellow-400"
-                  : "bg-gray-500 hover:bg-yellow-400"
-              }`}
-              onClick={() => setCurrentIndex(index)}
-            ></button>
-          ))}
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

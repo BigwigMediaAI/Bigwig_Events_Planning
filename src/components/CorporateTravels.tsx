@@ -1,86 +1,78 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import miceImage1 from "../assets/Hero/MICE.webp";
-import miceImage2 from "../assets/Hero/MICE2.webp";
-import miceImage3 from "../assets/Hero/MICE3.webp";
 import offsiteImage1 from "../assets/Hero/OFSITE.webp";
-import offsiteImage2 from "../assets/Hero/OFSITE1.webp";
-import offsiteImage3 from "../assets/Hero/OFSITE2.webp";
 import domesticImage1 from "../assets/background.webp";
-import domesticImage2 from "../assets/background.webp";
 
 const CorporateTravels: React.FC = () => {
-  const subsections = [
+  const sections = [
     {
-      title: "MICE (Meetings, Incentives, Conferences, Exhibitions)",
+      title: "MICE Experiences",
+      subtitle: "Meetings, incentives, conferences and exhibitions.",
       description:
-        "Make your next business gathering a resounding success. From high-level meetings and rewarding incentive trips to large-scale conferences and exhibitions, we handle all the logistics to ensure your event is productive, enjoyable, and perfectly executed.",
-      images: [miceImage1, miceImage2, miceImage3],
+        "We manage every detail for corporate travel programs so your teams arrive inspired, connected, and ready to perform.",
+      image: miceImage1,
     },
     {
-      title: "Offsites – Work Hard, Play Harder",
+      title: "Offsites",
+      subtitle: "Strategic retreats designed to energize.",
       description:
-        "Want to strengthen team spirit while working in a refreshing new environment? Our expertly curated offsites blend professional development with relaxation and team bonding, helping your employees recharge and collaborate in inspiring destinations.",
-      images: [offsiteImage1, offsiteImage2, offsiteImage3],
+        "Our offsite events blend purposeful work with curated leisure, creating a refreshing environment for team growth.",
+      image: offsiteImage1,
     },
     {
-      title: "Domestic Travel Packages – Discover New Horizons",
+      title: "Domestic Travel",
+      subtitle: "Thoughtful itineraries with seamless logistics.",
       description:
-        "Planning a business trip within the country? Our custom domestic travel packages cover everything from transportation and accommodation to curated itineraries ensuring a smooth and delightful travel experience for your team.",
-      images: [domesticImage1, domesticImage2, offsiteImage3],
+        "From transport to venues and hospitality, we make domestic travel effortless and memorable for every group.",
+      image: domesticImage1,
     },
-    // Add more subsections here if needed
   ];
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex(
-        (prevIndex) => (prevIndex + 1) % subsections[0].images.length
-      ); // Loop through images
-    }, 3000); // Change every 3 seconds
-
-    return () => clearInterval(interval); // Cleanup on component unmount
-  }, []);
-
   return (
-    <div id="event3" className=" py-8 px-4 md:px-10 mb-10">
-      <h1
-        id="travels"
-        className="text-4xl font-semibold text-center text-white mb-2"
-      >
-        Corporate Travels
-      </h1>
-      <p className="text-center text-gray-300 mb-12">
-        From MICE events to domestic travel packages, we ensure seamless
-        corporate travel experiences tailored to your needs.
-      </p>
-      <div className="space-y-12 md:w-11/12 mx-auto">
-        {subsections.map((section, index) => (
-          <div
-            key={index}
-            className={`flex flex-col md:h-[400px] md:flex-row items-start bg-[#28282B] border border-gray-700 p-2 shadow-lg rounded-lg overflow-hidden ${
-              index % 2 === 1 ? "md:flex-row-reverse" : ""
-            }`}
-          >
-            <div className="p-6 md:w-1/2">
-              <h2 className="text-2xl font-semibold text-gray-200 mb-4">
-                {section.title}
-              </h2>
-              <p className="text-gray-300 mb-6">{section.description}</p>
+    <section id="event3" className="py-16 bg-[#0b0b0d]">
+      <div className="max-w-6xl mx-auto px-4 md:px-8">
+        <div className="text-center mb-12">
+          <p className="text-sm uppercase tracking-[0.35em] text-yellow-400 mb-3">
+            corporate travels
+          </p>
+          <h2 className="text-4xl md:text-5xl font-semibold text-white">
+            Travel programs with precision, comfort, and visual polish.
+          </h2>
+          <p className="mt-4 text-gray-300 max-w-3xl mx-auto leading-8">
+            From incentive journeys to executive retreats, our team handles
+            crafting experiences that feel premium and effortless.
+          </p>
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-3">
+          {sections.map((section, index) => (
+            <div
+              key={index}
+              className="group overflow-hidden rounded-[32px] border border-gray-800 bg-[#121212] shadow-[0_30px_80px_rgba(0,0,0,0.45)] transition-transform duration-300 hover:-translate-y-1"
+            >
+              <div className="relative h-72 overflow-hidden">
+                <img
+                  src={section.image}
+                  alt={section.title}
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6">
+                  <p className="text-sm uppercase tracking-[0.35em] text-yellow-400">
+                    {section.title}
+                  </p>
+                  <p className="text-white text-2xl font-semibold mt-3">
+                    {section.subtitle}
+                  </p>
+                </div>
+              </div>
+              <div className="p-8">
+                <p className="text-gray-300 leading-7">{section.description}</p>
+              </div>
             </div>
-            <div className="md:w-1/2 p-4 relative">
-              {/* Single image displayed with smooth transitions */}
-              <img
-                src={section.images[currentImageIndex]}
-                alt={`${section.title} ${currentImageIndex + 1}`}
-                className="w-full h-64 md:h-[350px] object-cover rounded-lg shadow-md transition-all duration-1000"
-              />
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

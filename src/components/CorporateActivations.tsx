@@ -1,91 +1,87 @@
-import React, { useEffect, useState } from "react";
-import atlImage1 from "../assets/Hero/ATL.webp"; // Replace with actual images
-import atlImage2 from "../assets/Hero/ATL1.webp"; // Replace with actual images
-import atlImage3 from "../assets/Hero/ATL2.webp"; // Replace with actual images
-import btlImage1 from "../assets/Hero/BTL.webp"; // Replace with actual images
-import btlImage2 from "../assets/Hero/BTL1.webp"; // Replace with actual images
-import btlImage3 from "../assets/Hero/BTL2.webp"; // Replace with actual images
+import React from "react";
+import atlImage1 from "../assets/Hero/ATL.webp";
+import btlImage1 from "../assets/Hero/BTL.webp";
 
 const CorporateActivationsATLBTL: React.FC = () => {
-  const subsections = [
+  const sections = [
     {
-      title: "ATL (Above the Line) Activations",
+      title: "ATL Activations",
+      subtitle: "Scale awareness across mass audiences.",
       description:
-        "Reach a larger audience with mass media channels. From TV ads to print media, ATL strategies are perfect for brand awareness.",
-      images: [atlImage1, atlImage2, atlImage3],
-      listItems: [
-        "TV Campaigns",
-        "Radio Advertisements",
-        "Print Ads (Newspapers, Magazines)",
-        "Outdoor Advertising (Billboards, Posters)",
+        "We design Above-the-Line campaigns that blend media, visuals and activation moments for strong brand presence.",
+      items: [
+        "TV and streaming campaigns",
+        "Radio and audio promotions",
+        "Print and outdoor media",
+        "Integrated brand storytelling",
       ],
+      image: atlImage1,
     },
     {
-      title: "BTL (Below the Line) Activations",
+      title: "BTL Activations",
+      subtitle: "Create deeper connections on the ground.",
       description:
-        "Engage directly with your audience through personalized experiences. BTL activations include events, promotions, and direct mail.",
-      images: [btlImage1, btlImage2, btlImage3],
-      listItems: [
-        "Direct Mail Campaigns",
-        "Event Sponsorships",
-        "Promotional Activations",
-        "Sampling and Product Demonstrations",
+        "From branded experiences to promotional activations, we help you build direct engagement with your audience.",
+      items: [
+        "Event activations and pop-ups",
+        "Sampling and in-store demos",
+        "Experiential roadshows",
+        "Targeted relationship campaigns",
       ],
+      image: btlImage1,
     },
   ];
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex(
-        (prevIndex) => (prevIndex + 1) % subsections[0].images.length
-      ); // Loop through images
-    }, 3000); // Change every 3 seconds
-
-    return () => clearInterval(interval); // Cleanup on component unmount
-  }, []);
-
   return (
-    <div id="event2" className=" py-8 px-4 md:px-10 mb-10">
-      <h1 className="text-4xl font-semibold text-center text-white mb-2">
-        Corporate Activations
-      </h1>
-      <p className="text-center text-gray-300 mb-12">
-        Whether it's ATL for mass outreach or BTL for personalized engagement,
-        we help execute impactful corporate activations.
-      </p>
-      <div className="space-y-12 md:w-11/12 mx-auto">
-        {subsections.map((section, index) => (
-          <div
-            key={index}
-            className={`flex flex-col md:flex-row md:h-[400px]  items-start bg-[#28282B] border border-gray-700 p-2 shadow-lg rounded-lg overflow-hidden ${
-              index % 2 === 1 ? "md:flex-row-reverse" : ""
-            }`}
-          >
-            <div className="p-6 md:w-1/2">
-              <h2 className="text-2xl font-semibold text-gray-200 mb-4">
-                {section.title}
-              </h2>
-              <p className="text-gray-300 mb-6">{section.description}</p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-300">
-                {section.listItems.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
+    <section id="event2" className="py-16 bg-[#050505]">
+      <div className="max-w-6xl mx-auto px-4 md:px-8">
+        <div className="text-center mb-12">
+          <p className="text-sm uppercase tracking-[0.35em] text-yellow-400 mb-3">
+            corporate activations
+          </p>
+          <h2 className="text-4xl md:text-5xl font-semibold text-white">
+            Activation campaigns with visual impact and strategic energy.
+          </h2>
+          <p className="mt-4 text-gray-300 max-w-3xl mx-auto leading-8">
+            From broad awareness to personalized engagement, our activations
+            move audiences with clarity and creative direction.
+          </p>
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-2">
+          {sections.map((section, index) => (
+            <div
+              key={index}
+              className="group overflow-hidden rounded-[32px] border border-gray-800 bg-[#121212] shadow-[0_30px_80px_rgba(0,0,0,0.45)] transition-transform duration-300 hover:-translate-y-1"
+            >
+              <div className="relative h-80 overflow-hidden">
+                <img
+                  src={section.image}
+                  alt={section.title}
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6">
+                  <p className="text-sm uppercase tracking-[0.35em] text-yellow-400">
+                    {section.title}
+                  </p>
+                  <h3 className="text-white text-2xl font-semibold mt-3">
+                    {section.subtitle}
+                  </h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <p className="text-gray-300 leading-7 mb-6">{section.description}</p>
+                <ul className="list-disc space-y-3 pl-5 text-gray-300">
+                  {section.items.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div className="md:w-1/2 p-4 relative">
-              {/* Single image displayed with smooth transitions */}
-              <img
-                src={section.images[currentImageIndex]}
-                alt={`${section.title} ${currentImageIndex + 1}`}
-                className="w-full h-64 md:h-[350px] object-cover rounded-lg shadow-md transition-all duration-1000"
-              />
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

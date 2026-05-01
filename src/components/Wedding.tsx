@@ -5,101 +5,82 @@ import img4 from "../assets/Hero/weeding2.webp";
 
 const WeddingSection = () => {
   return (
-    <div id="bigweddings" className="relative">
-      {/* Content Section */}
-      <div className="relative md:w-11/12 mx-auto z-10 px-5 py-12">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-semibold text-white">
+    <section id="bigweddings" className="py-20 bg-[#090909]">
+      <div className="max-w-6xl mx-auto px-4 md:px-8">
+        <div className="text-center mb-10">
+          <p className="text-sm uppercase tracking-[0.35em] text-yellow-400 mb-3">
+            weddings
+          </p>
+          <h1 className="text-4xl md:text-5xl font-semibold text-white">
             Make Your Dream Wedding a Reality
           </h1>
-          <p className="mt-4 text-lg text-gray-300">
+          <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto leading-8">
             Discover stunning venues, breathtaking decor, and seamless planning
             to make your special day unforgettable.
           </p>
         </div>
 
-        {/* Content Grid */}
-        <div className="md:w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* Left Section - Images */}
+        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] items-center">
           <div className="grid grid-cols-2 gap-4">
-            <div className="rounded-lg overflow-hidden shadow-lg h-60 border border-gray-500">
-              <img
-                src={img1}
-                alt="Wedding Venue"
-                className="object-cover w-full h-full"
-              />
-            </div>
-            <div className="rounded-lg overflow-hidden shadow-lg h-60 border border-gray-500">
-              <img
-                src={img2}
-                alt="Wedding Decor"
-                className="object-cover w-full h-full"
-              />
-            </div>
-            <div className="rounded-lg overflow-hidden shadow-lg h-60 border border-gray-500">
-              <img
-                src={img3}
-                alt="Couple Dancing"
-                className="object-cover w-full h-full"
-              />
-            </div>
-            <div className="rounded-lg overflow-hidden shadow-lg h-60 border border-gray-500">
-              <img
-                src={img4}
-                alt="Wedding Cake"
-                className="object-cover w-full h-full"
-              />
-            </div>
+            {[img1, img2, img3, img4].map((src, index) => (
+              <div
+                key={index}
+                className="overflow-hidden rounded-[28px] border border-gray-800 bg-[#111111] shadow-[0_25px_60px_rgba(0,0,0,0.25)] h-60"
+              >
+                <img
+                  src={src}
+                  alt={`Wedding image ${index + 1}`}
+                  className="h-full w-full object-cover transition duration-700 hover:scale-105"
+                />
+              </div>
+            ))}
           </div>
 
-          {/* Right Section - Content */}
-          <div className="text-center md:text-left flex flex-col justify-center">
-            <h2 className="text-3xl font-semibold text-gray-300 mb-4">
+          <div className="space-y-6 text-center md:text-left">
+            <h2 className="text-3xl font-semibold text-white">
               Your Perfect Day, Tailored to You
             </h2>
-            <p className="text-justify text-gray-300 mb-3">
+            <p className="text-gray-300 leading-8">
               At our wedding planning services, we specialize in transforming
               your dreams into reality. Whether it's a grand celebration or an
-              intimate gathering, we ensure that every detail is carefully
-              handled—from selecting the perfect venue to designing exquisite
-              decor and managing all aspects of the event. Our team of seasoned
-              professionals takes pride in creating unforgettable memories,
-              leaving you free to enjoy your special day without any stress or
-              worries.
+              intimate gathering, we ensure every detail is carefully handled.
             </p>
-            <p className="text-justify md:text-left text-gray-300 mb-3">
+            <p className="text-gray-300 leading-8">
               Our personalized approach means we listen to your unique vision
-              and turn it into a beautifully orchestrated experience. With our
-              expertise in handling everything from floral arrangements to
-              entertainment, catering, and guest management, you can be assured
-              that your wedding will be a seamless blend of elegance and joy.
+              and turn it into a beautifully orchestrated experience with
+              flawless execution.
             </p>
-            <ul className="text-justify md:text-left list-disc list-inside text-gray-300 mb-3">
-              <li>Stunning venues handpicked to match your vision and style</li>
-              <li>
-                Flawless execution of every detail, ensuring a smooth flow of
-                events
-              </li>
-              <li>
-                Personalized themes and decor tailored to your preferences
-              </li>
-              <li>
-                Expert coordination by dedicated professionals for a stress-free
-                experience
-              </li>
-              <li>
-                High-quality catering with menus curated to delight your guests
-              </li>
-              <li>
-                Entertainment options designed to enhance the joy of your
-                special day
-              </li>
-            </ul>
+
+            <div className="grid gap-4">
+              <div className="rounded-[28px] border border-gray-800 bg-[#111111] p-6 shadow-[0_18px_50px_rgba(0,0,0,0.2)]">
+                <p className="text-yellow-400 uppercase tracking-[0.25em] text-sm mb-3">
+                  Planning highlights
+                </p>
+                <ul className="list-disc list-inside text-gray-300 space-y-2 leading-7">
+                  <li>Stunning venues handpicked to match your vision.</li>
+                  <li>
+                    Flawless execution of every detail, from start to finish.
+                  </li>
+                  <li>
+                    Personalized decor and entertainment designed around you.
+                  </li>
+                </ul>
+              </div>
+              <div className="rounded-[28px] border border-gray-800 bg-[#111111] p-6 shadow-[0_18px_50px_rgba(0,0,0,0.2)]">
+                <p className="text-yellow-400 uppercase tracking-[0.25em] text-sm mb-3">
+                  Seamless experience
+                </p>
+                <ul className="list-disc list-inside text-gray-300 space-y-2 leading-7">
+                  <li>Dedicated coordination for a stress-free celebration.</li>
+                  <li>High-quality catering that delights every guest.</li>
+                  <li>Beautiful style and storytelling that feel timeless.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
