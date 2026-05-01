@@ -111,7 +111,7 @@ const HeroSection: React.FC = () => {
                   </button>
                 )}
                 {item === "BigEvents" && bigEventsOpen && (
-                  <div className="absolute top-12 left-0 bg-slate-900/95 text-white p-4 shadow-2xl w-64 rounded-2xl">
+                  <div className="absolute top-7 left-0 bg-slate-900/95 text-white py-2 px-4 shadow-2xl w-64 rounded-2xl">
                     <ul className="space-y-2">
                       {[
                         ["Corporate Events", "event1"],
@@ -123,7 +123,7 @@ const HeroSection: React.FC = () => {
                         <li key={id}>
                           <button
                             onClick={() => scrollToSection(id)}
-                            className="w-full text-left hover:text-yellow-400 transition-colors duration-300"
+                            className="w-full text-sm text-left hover:text-yellow-400 transition-colors duration-300"
                           >
                             {label}
                           </button>
